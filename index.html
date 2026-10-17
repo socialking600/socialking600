@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>MAHAGAURI — The Stillness That Moved a River | Director's Treatment</title>
+<meta name="description" content="An alternative director's version of the Mata Mahagauri story: a 60-second cinematic AI film treatment with shot list, re-hook ladder, copy-paste generation prompts and Suno music map.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500;700;900&family=Inter:wght@400;500;600;700&family=Playfair+Display:ital,wght@0,600;1,500&display=swap" rel="stylesheet">
+<style>
+:root{--ink:#eaf2f8;--muted:#9fb4c7;--bg:#060a10;--panel:#0c1420;--panel2:#101c2e;--line:#1e324e;--blue:#6ec3ff;--silver:#dfeeff;--gold:#f2c46d;--crimson:#ff8a7a;--pearl:#fff7e8}
+*{box-sizing:border-box;margin:0;padding:0}html{scroll-behavior:smooth}
+body{background:var(--bg);color:var(--ink);font-family:Inter,system-ui,sans-serif;line-height:1.65;overflow-x:hidden}
+a{color:var(--blue)} img{display:block;max-width:100%}
+.nav{position:fixed;top:0;left:0;right:0;z-index:50;display:flex;justify-content:space-between;align-items:center;padding:14px 28px;background:rgba(6,10,16,.78);backdrop-filter:blur(14px);border-bottom:1px solid rgba(110,195,255,.15)}
+.nav b{font-family:Cinzel,serif;letter-spacing:.22em;font-size:.85rem}.nav .links{display:flex;gap:18px;flex-wrap:wrap}.nav a{color:var(--muted);text-decoration:none;font-size:.82rem;font-weight:600;letter-spacing:.06em;text-transform:uppercase}.nav a:hover{color:#fff}
+.btn{display:inline-flex;align-items:center;gap:8px;padding:12px 22px;border-radius:999px;border:1px solid rgba(255,255,255,.25);color:#fff;text-decoration:none;font-weight:700;font-size:.9rem;background:rgba(255,255,255,.06);cursor:pointer}
+.btn.gold{background:linear-gradient(135deg,#f2c46d,#e08a3c);color:#1a1205;border:none}
+.hero{min-height:100vh;position:relative;display:flex;align-items:flex-end;padding:120px 28px 64px;background:#000}
+.hero-bg{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;opacity:.82}
+.hero::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(6,10,16,.25),rgba(6,10,16,.55) 55%,#060a10 100%),linear-gradient(90deg,rgba(6,10,16,.65),transparent 60%)}
+.hero-in{position:relative;z-index:2;max-width:1200px;margin:0 auto;width:100%}
+.kicker{letter-spacing:.32em;text-transform:uppercase;font-size:.75rem;font-weight:700;color:var(--gold);margin-bottom:14px}
+h1{font-family:Cinzel,serif;font-weight:900;font-size:clamp(2.8rem,8vw,6.2rem);line-height:.95;letter-spacing:.02em}
+h1 em{font-family:"Playfair Display",serif;font-weight:500;font-style:italic;text-transform:none;letter-spacing:0;color:var(--silver);display:block;font-size:clamp(1.4rem,3.5vw,2.4rem);margin-top:14px}
+.logline{max-width:760px;font-size:1.15rem;color:#d7e6f5;margin:22px 0 18px}
+.meta{display:flex;gap:10px;flex-wrap:wrap;margin:18px 0 28px}.pill{border:1px solid rgba(255,255,255,.22);background:rgba(0,0,0,.35);padding:7px 14px;border-radius:999px;font-size:.82rem;font-weight:600}
+.wrap{max-width:1200px;margin:0 auto;padding:0 28px} section{padding:84px 0 12px}
+h2{font-family:Cinzel,serif;font-size:clamp(1.7rem,4vw,2.6rem);letter-spacing:.03em;margin-bottom:10px}
+h3{font-size:1.15rem;margin-bottom:8px} .sub{color:var(--muted);max-width:820px;margin-bottom:28px}
+.label{letter-spacing:.28em;text-transform:uppercase;font-size:.72rem;font-weight:700;color:var(--blue);margin-bottom:10px}
+.grid2{display:grid;grid-template-columns:1fr 1fr;gap:18px}.grid3{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}.grid4{display:grid;grid-template-columns:repeat(2,1fr);gap:18px}
+.card{background:linear-gradient(180deg,var(--panel2),var(--panel));border:1px solid var(--line);border-radius:20px;padding:24px}
+.card p,.card li{color:#c8d8ea;font-size:.96rem}.card ul{margin-left:18px}.num{font-family:Cinzel,serif;font-size:2rem;color:var(--gold)}
+.quote{border-left:3px solid var(--gold);padding:10px 18px;background:rgba(242,196,109,.06);border-radius:0 14px 14px 0;font-family:"Playfair Display",serif;font-style:italic;font-size:1.2rem;color:var(--pearl);margin:20px 0}
+table{width:100%;border-collapse:collapse;font-size:.92rem;overflow:hidden;border-radius:16px}
+th,td{padding:13px 14px;border-bottom:1px solid var(--line);vertical-align:top;text-align:left}th{background:#13243f;letter-spacing:.06em;text-transform:uppercase;font-size:.72rem;color:#bcd9ff}tr:nth-child(even) td{background:rgba(255,255,255,.02)} td:first-child{font-weight:700;color:#fff;white-space:nowrap}
+.vs td:nth-child(2){color:#a9bfd6}.vs td:nth-child(3){color:#ffe9bd}
+.frame{border-radius:20px;overflow:hidden;border:1px solid var(--line);background:var(--panel)}.frame img{aspect-ratio:16/9;object-fit:cover;width:100%}.frame .cap{padding:18px}.cap p{color:#c8d8ea;font-size:.94rem}.tag{display:inline-block;font-size:.68rem;letter-spacing:.2em;text-transform:uppercase;font-weight:700;color:#08131f;background:var(--gold);padding:4px 10px;border-radius:999px;margin-bottom:8px}
+.timeline{background:var(--panel);border:1px solid var(--line);border-radius:22px;padding:26px}
+.track{position:relative;height:14px;border-radius:999px;background:linear-gradient(90deg,#23405f,#6ec3ff 28%,#dfeeff 50%,#f2c46d 78%,#ff8a7a);margin:34px 8px 12px}
+.dot{position:absolute;top:50%;transform:translate(-50%,-50%);width:30px;height:30px;border-radius:50%;border:2px solid #fff;background:#0c1420;color:#fff;font-weight:800;cursor:pointer}.dot:hover,.dot.active{background:var(--gold);color:#111}
+.ticks{display:flex;justify-content:space-between;color:var(--muted);font-size:.78rem;margin:0 4px 18px}
+#peakDetail{background:#0a1626;border:1px solid var(--line);border-radius:16px;padding:20px;min-height:130px}
+details{background:var(--panel);border:1px solid var(--line);border-radius:18px;margin-bottom:14px;overflow:hidden}summary{cursor:pointer;padding:18px 20px;font-weight:700;list-style:none}summary:hover{color:var(--gold)}
+.promptbox{position:relative;padding:0 20px 20px}pre{white-space:pre-wrap;background:#050a12;border:1px solid #1c304c;border-radius:14px;padding:18px;font-size:.84rem;line-height:1.6;color:#d8ecff;max-height:520px;overflow:auto}
+.copy{margin-top:12px;background:var(--gold);color:#171005;border:none;padding:10px 18px;border-radius:999px;font-weight:800;cursor:pointer}.copy:active{transform:scale(.97)}
+.hook{display:grid;grid-template-columns:70px 1fr;gap:14px;padding:14px 0;border-bottom:1px dashed var(--line)}.hook b{font-family:Cinzel,serif;color:var(--gold);font-size:1.1rem}.hook span{color:var(--muted);display:block;font-size:.9rem}
+.notice{background:rgba(110,195,255,.07);border:1px solid rgba(110,195,255,.25);border-radius:16px;padding:18px 20px;color:#cfe6ff}
+footer{margin-top:90px;padding:40px 28px 60px;border-top:1px solid var(--line);color:var(--muted)}footer .wrap{display:flex;justify-content:space-between;gap:20px;flex-wrap:wrap;padding:0}
+.reveal{opacity:0;transform:translateY(18px);transition:.7s ease}.reveal.on{opacity:1;transform:none}
+@media(max-width:860px){.grid2,.grid3,.grid4{grid-template-columns:1fr}.nav .links{display:none}td:first-child{white-space:normal}}
+</style>
+</head>
+<body>
+<nav class="nav"><b>MAHAGAURI</b><div class="links"><a href="#story">Story</a><a href="#direction">Direction</a><a href="#frames">Keyframes</a><a href="#shots">Shot List</a><a href="#prompts">Prompts</a><a href="#music">Music</a><a href="#long">Long Cut</a></div></nav>
+
+<header class="hero">
+<img class="hero-bg" src="images/keyframe-02-river-waits.jpg" alt="A luminous river suspended in mid-air above a woman with open palms in a Himalayan gorge">
+<div class="hero-in">
+<div class="kicker>My Version · A Director's Treatment · 60 Seconds</div>
+<h1>MAHAGAURI <em>The Stillness That Moved a River</em></h1>
+<p class="logline"><strong>Logline:</strong> A Himalayan princess sits so still for love that the seasons, the mountains and a heavenly river change course around her — and when grace finally descends, it stops in mid-air… and waits for <em>her</em> to say yes.</p>
+<div class="meta"><span class="pill">60s master</span><span class="pill">90s + 3 min expansions inside</span><span class="pill">16:9 protected for 9:16</span><span class="pill">4 peaks · 13 shots · 4 generation clips</span><span class="pill">No dialogue · No on-screen text</span></div>
+<a class="btn gold" href="#prompts">Jump to shoot-ready prompts ↓</a> <a class="btn" href="#direction">Read my direction</a> <a class="btn" href="PRODUCTION-PACK.md">Production pack (.md)</a>
+</div>
+</header>
+
+<main class="wrap">
+
+<section id="intro" class="reveal">
+<div class="label">First — on your note</div><h2>You were right about the releases.</h2>
+<p class="sub">A 20–30 second release is a feature-film luxury. In 60 seconds it eats the film. Your fix — peaks at ~10 / 28 / 42 / 55 with 3–5 second breaths and an instant re-hook — is exactly how vertical retention actually works: <strong>peak → exhale → new question before the thumb moves.</strong> I kept your peak spacing almost exactly (mine: 12 / 27 / 42 / 56). What I changed is <em>what a peak is</em>. In your cut every peak is louder and bigger. In mine, the second peak is <em>silence</em> — a river stopping. Contrast, not volume, is what makes a peak feel massive.</p>
+<div class="notice"><strong>My one-sentence Thesis:</strong> Your film is about heaven acting on her. Mine is about her stillness acting on heaven. Same myth, same beats, opposite camera — and that single flip changes every shot.</div>
+</section>
+
+<section id="story" class="reveal">
+<div class="label">The Story — Myth Kernel</div><h2>What the katha actually gives you</h2>
+<p class="sub">Mahagauri is the eighth Navadurga. Strip the variants to the shared spine and you get three filmable acts:</p>
+<div class="grid3">
+<div class="card"><div class="num">I</div><h3>The Tapas</h3><p>Parvati, daughter of Himalaya, resolves to win Shiva. She gives up food, then even leaves — earning the name <em>Aparna</em>, “one without even a leaf.” Her mother cries “<em>U… mā!</em>” — “Oh, don’t!” — giving her the name <em>Uma</em>. Years of heat, snow and dust darken her body.</p></div>
+<div class="card"><div class="num">II</div><h3>The Bath</h3><p>Pleased by her endurance, Shiva accepts her and washes her with Ganga's water. The dark outer sheath separates from her — in some tellings becoming Goddess Kaushiki — and what remains is radiant: white as the conch, the moon and the kunda flower. <em>Maha-Gauri</em>: supremely radiant.</p></div>
+<div class="card"><div class="num">III</div><h3>The Blessing</h3><p>She is shown serene on the white bull Vrishabha, in white, holding trishul and damaru, her other hands in <em>abhaya</em> (fear-not) and <em>varada</em> (boon-giving) mudra. She is believed to wash away sins as Ganga washes the earth, and to grant peace and endurance — exactly what she herself practised.</p></div>
+</div>
+<div class="quote">“She didn't become pure by losing her darkness. She became whole by letting both the night and the moonlight go home.” — the line this cut is built to earn. Put it in your caption, not on screen.</div>
+<p class="sub"><strong>Why the Kaushiki beat matters:</strong> if the film reads as “dark = dirty, white = pure,” your comments will fight about colourism instead of sharing blessings. My cut treats the dark form as <em>tapas made visible</em> — honoured, star-filled, ascending — not dirt being scrubbed off. It is more faithful to the Kaushiki telling, and it gives you a second, discussable goddess-silhouette inside one transformation.</p>
+</section>
+
+<section id="direction" class="reveal">
+<div class="label">My Direction</div><h2>Three reversals of your cut</h2>
+<div class="grid3">
+<div class="card"><div class="num">1</div><h3>The camera learns tapas</h3><p>Your camera never rests: FPV charges, crash zooms, bullet-time. Mine <em>gives up movement the way she gives up food</em>. Shot 1 hunts for her (restless drift). By Shot 5 the camera is fully locked-off and only the world moves — seasons, birds, rivers — around a woman who doesn't. After the bath, the camera moves <em>with</em> her for the first time. The audience feels grace in their body before they can name it: stillness → flow.</p></div>
+<div class="card"><div class="num">2</div><h3>The river asks permission</h3><p>Your Peak 2 is impact: the river collapses <em>on</em> her. Mine makes the suspension the climax. The river hangs, trembling. One drop falls — and stops a finger's width above her skin. She must stand, and open her palms, for anything to happen. Two full seconds where she could refuse. Consent turns a VFX shot into the emotional peak, and her from recipient into protagonist.</p></div>
+<div class="card"><div class="num">3</div><h3>The bull chooses her</h3><p>Your finale is power: she mounts, sun explodes, bullet-time. Mine ends quieter and, I'd argue, bigger: the bull <em>kneels</em>. She doesn't climb or pose — she raises one hand in abhaya, straight toward camera. The last thing the film gives the viewer is a blessing aimed at them. That is your comment engine (“Jai Mata Di 🙏”), your share-to-bless-someone engine, and your loop: her raised hand matches Shot 1's hand on the beads in the same screen position.</p></div>
+</div>
+<br>
+<table class="vs"><tr><th>Element</th><th>Your cut</th><th>My cut</th></tr>
+<tr><td>Hero's action</td><td>Endures, then is washed and rides</td><td>Refuses to move, then <em>consents</em> to grace</td></tr>
+<tr><td>Camera</td><td>Maximal throughout (FPV / orbit / bullet-time)</td><td>Locked-off → releases only after transformation</td></tr>
+<tr><td>Biggest peak</td><td>Sun explosion, whole range flares gold (55s)</td><td>A drop that doesn't land (27s) — peak by subtraction</td></tr>
+<tr><td>Darkness</td><td>Dust blasted off in a silver explosion</td><td>Night-veil (Kaushiki) lifts as stars, honoured</td></tr>
+<tr><td>Bull</td><td>Mount for a power ride</td><td>Kneels voluntarily; devotion, not transport</td></tr>
+<tr><td>Loop device</td><td>Hand dips in river → matches opening world</td><td>Blessing hand → match-cut to bead hand, same frame position</td></tr>
+<tr><td>Emotion sold</td><td>Awe / spectacle</td><td>Endurance → surrender → blessing</td></tr></table>
+</section>
+
+<section id="frames" class="reveal">
+<div class="label">Visual Treatment</div><h2>Four keyframes</h2><p class="sub">Palette journey in one line: <strong>storm-blue &amp; ochre → silver → pearl-white → dawn gold.</strong> Use these as image-to-video start frames — it's far more reliable than pure text-to-video for face and saree continuity.</p>
+<div class="grid4">
+<div class="frame"><img src="images/keyframe-01-tapas.jpg" alt="Woman meditating in ochre saree in Himalayan gorge as seasons pass"><div class="cap"><span class="tag">Frame 1 · 0s</span><h3>The Tapas</h3><p>Locked-off. Snow on one shoulder, leaves in the wind — four seasons in one composition. She is the only sharp, still thing in a moving world. This is the thumbnail for the “before” search term and your Shot 3 start frame.</p></div></div>
+<div class="frame"><img src="images/keyframe-02-river-waits.jpg" alt="Luminous river suspended above woman with open palms, white bull in mist"><div class="cap"><span class="tag">Frame 2 · 24s</span><h3>The River Waits ★ Thesis shot</h3><p>The money frame — design your thumbnail from this. Palms open, one drop in free-fall, bull witnessing from mist. It contains the whole film: heaven above, choice below.</p></div></div>
+<div class="frame"><img src="images/keyframe-03-mahagauri.jpg" alt="Radiant woman in white saree in Himalayan pool as starry night veil lifts away"><div class="cap"><span class="tag">Frame 3 · 38s</span><h3>The Night Goes Home</h3><p>Kaushiki as a star-veil lifting, not dirt dissolving. Jasmine on the water, moonlight skin. Keep her smile <em>small</em> — serenity reads as divinity; a grin reads as an ad.</p></div></div>
+<div class="frame"><img src="images/keyframe-04-bull-kneels.jpg" alt="White bull kneeling before woman in white saree at dawn, trident glowing on snow peak"><div class="cap"><span class="tag">Frame 4 · 55s</span><h3>The Bull Kneels</h3><p>Finale by devotion, not horsepower. Trident = tiny background light, never a weapon in use. Next and last shot: her abhaya hand rises toward lens → loop.</p></div></div>
+</div>
+</section>
+
+<section id="timeline" class="reveal">
+<div class="label">Retention Design</div><h2>The 60-second peak map — click a peak</h2>
+<div class="timeline">
+<div class="track">
+<button class="dot" style="left:20%" data-p="0">1</button><button class="dot" style="left:45%" data-p="1">2</button><button class="dot" style="left:70%" data-p="2">3</button><button class="dot" style="left:93%" data-p="3">4</button>
+</div><div class="ticks"><span>0s</span><span>15s</span><span>30s</span><span>45s</span><span>60s</span></div>
+<div id="peakDetail"></div></div>
+<br><h3>My re-hook ladder — every question opens before the last closes</h3>
+<div>
+<div class="hook"><b>0s</b><div>Why is everything moving except her?<span>Pattern-interrupt cold open: time-lapse world, frozen woman. No titles, no logos.</span></div></div>
+<div class="hook"><b>4s</b><div>What has she given up?<span>A leaf lands in her lap — the Aparna beat. She doesn't take it. Stakes without a word.</span></div></div>
+<div class="hook"><b>9s</b><div>Who is listening?<span>A damaru-like heartbeat with no visible source. Shiva as sound only — present, never shown (also keeps you filter-safe).</span></div></div>
+<div class="hook"><b>14s</b><div>Why is the mountain answering?<span>A hairline of light runs up the frozen peak toward the crescent. Heaven noticed <em>her first</em>.</span></div></div>
+<div class="hook"><b>19s</b><div>Why did the river stop?<span>It falls — then doesn't. The loudest silence in the film.</span></div></div>
+<div class="hook"><b>24s</b><div>Will she open her hands?<span>The only question that's hers to answer. Hold it two seconds longer than comfortable.</span></div></div>
+<div class="hook"><b>31s</b><div>What is leaving her body?<span>Stars, not dust. Viewers who know Kaushiki will comment it for you — free algorithm fuel.</span></div></div>
+<div class="hook"><b>38s</b><div>Is that still her?<span>Same face, moonlit. Let recognition land in close-up, two arms only (safest + most human).</span></div></div>
+<div class="hook"><b>46s</b><div>Why is the bull kneeling?<span>An animal choosing = the final proof of who she has become. No dialogue needed.</span></div></div>
+<div class="hook"><b>57s</b><div>Who is she blessing?<span>She looks past the bull — at us. Comment, share, rewatch. Hand match-cuts to Shot 1.</span></div></div>
+</div>
+</section>
+
+<section id="shots" class="reveal">
+<div class="label">Shooting Script</div><h2>Shot list — 13 shots, 60 seconds</h2><p class="sub">Golden rule printed on every prompt: <strong>before 30s the camera may not travel; after 30s it may not be still for more than 2 seconds.</strong> That one rule <em>is</em> the direction.</p>
+<table><tr><th># / Time</th><th>Shot</th><th>Direction</th><th>Sound</th></tr>
+<tr><td>1 · 0–4s</td><td>Extreme wide, 18mm, slow restless drift that <em>decelerates to a stop</em></td><td>Himalayan gorge, seasons strobing (light only — sun/monsoon/snow via grading flicker). One ochre figure, centre-low. By the last frame: camera dead still.</td><td>Wind + one held breath. No music yet — earn it.</td></tr>
+<tr><td>2 · 4–8s</td><td>Locked macro 100mm</td><td>Fingers on rudraksha. A green leaf settles beside her hand, dries, cracks, blows away (time-lapse in one shot). She never takes it. <em>Aparna</em> told in 4 seconds.</td><td>Bead clicks slow into a rhythm — becomes the film's pulse.</td></tr>
+<tr><td>3 · 8–12s</td><td>Locked medium 50mm — <strong>PEAK 1</strong></td><td>THE seasons shot (Keyframe 1). Full weather cycle rips around her: snow builds on her shoulder, melts, dust coats her, rain cleans the rock but <em>not her</em>. She does not blink out of rhythm.</td><td>Choir enters on ONE sustained note, then cuts dead.</td></tr>
+<tr><td>4 · 12–15s</td><td>Rack focus 85mm</td><td>Release. Her closed eyes → focus pulls to the distant peak: a thread of light climbs to the golden trident under the crescent moon. Heaven's reply is a thread, not a thunderbolt.</td><td>Silence. Distant, single damaru beat — like a heart noticing.</td></tr>
+<tr><td>5 · 15–20s</td><td>Locked low wide 24mm</td><td>Sky brightens silver. The river begins to fall out of cloud — huge — then <strong>stops in mid-air</strong>, canopy trembling above the gorge. Birds freeze their flight path around it.</td><td>Rising roar… sliced to nothing as it stops. Droplets tick like rain on tin, in slow motion.</td></tr>
+<tr><td>6 · 20–24s</td><td>Slow push 35mm (first real move — 10cm only)</td><td>White bull steps from mist. Looks up at the water, then at her. The witness tells us: this is waiting on <em>someone</em>.</td><td>Bull's breath. Bull bell — single note, becomes the musical key.</td></tr>
+<tr><td>7 · 24–27s</td><td>Extreme macro → medium — <strong>PEAK 2</strong></td><td>One drop detaches, falls in extreme slow motion… and halts above her closed fist. Beat. She stands. Beat. <strong>Palms open.</strong> (Keyframe 2.)</td><td>Everything out except her breath — the first full breath of the film.</td></tr>
+<tr><td>8 · 27–31s</td><td>Wide 16mm, speed ramp</td><td>The river completes its fall — not an explosion, an <em>embrace</em>: it wraps her in a slow luminous column. Dust doesn't blast off; it lifts as golden motes into the water's light. White-out.</td><td>Full swell — your Suno drop #2. Let the white-out carry 6 frames of pure tone.</td></tr>
+<tr><td>9 · 31–36s</td><td>Overhead crane 24mm, first flowing move</td><td>Release. Pool, ripples, jasmine appearing ripple-by-ripple. A dark, star-speckled veil-shape rises off the water's surface like a reflection standing up, and ascends. <em>Kaushiki goes home.</em></td><td>Female hum, no words. Water only.</td></tr>
+<tr><td>10 · 36–42s</td><td>ECU 135mm slow push → wide reveal — <strong>PEAK 3</strong></td><td>Her face, moonlit, eyes open (two arms in CU). Pull back: white silk, jasmine in loose damp hair, and — only now, only wide, only 2 seconds — four arms, trishul &amp; damaru held at rest. (Keyframe 3.)</td><td>Choir returns, now in harmony — the Peak-1 note resolved. That's your musical storytelling.</td></tr>
+<tr><td>11 · 42–48s</td><td>Floating gimbal wide 24mm</td><td>Release 20XX: camera finally <em>flows</em>. She walks the valley's edge; jasmine opens in small honest clusters where her wet footprints land — not a CGI tsunami. Restraint reads as real.</td><td>Sitar/veena figure over water. First “easy” music of the film.</td></tr>
+<tr><td>12 · 48–56s</td><td>Slow orbit 35mm anamorphic — <strong>PEAK 4</strong></td><td>Dawn breaks crimson-gold. The bull approaches, and <strong>kneels</strong>, head bowed. She rests a hand on its forehead. Trident on the peak catches first sun — a blink of gold, not an explosion. (Keyframe 4.)</td><td>One temple bell + full warm chord. Don't oversell; devotion is quiet.</td></tr>
+<tr><td>13 · 56–60s</td><td>ECU hand 85mm, locked (bookend)</td><td>She turns to camera. Abhaya hand rises, fills frame centre — <strong>same screen position as the bead-hand in Shot 2</strong>. Hold 1s. Cut to black on a single drop. Rewatch begins at the same hand.</td><td>Music out. One drop. 0.5s of true silence before loop.</td></tr>
+</table>
+</section>
+
+<section id="prompts" class="reveal">
+<div class="label">Generation Pack</div><h2>Copy-paste prompts — 4 clips, not 2</h2>
+<p class="sub">Your instinct to split was right; I'd go further. Two 30-second generations drift faces and sarees. <strong>Four ~15-second clips, each started from the matching keyframe image (image-to-video), joined at the white-out (31s) and the two silences</strong> — cuts hide in loud and quiet extremes. Character block is identical in A/B and C/D: never re-describe her mid-pair. Safe wording throughout: fictional adult, symbols only, no deity names, nothing wielded, no violence.</p>
+
+<details open><summary>CLIP A · 0–15s — The Tapas (start frame: Keyframe 1)</summary><div class="promptbox"><pre id="pA">Photorealistic cinematic Hindu mythological epic, 16:9 horizontal, 1920x1080, 15 seconds, 4 shots with hard cuts. Large-format cinematography, deep focus, motivated volumetric light, 35mm film grain, storm-blue teal and ochre palette. Real photographic look with real dust, water, cotton and stone, NOT cartoon, NOT video game, NOT 3D render. All characters fictional adults. No violence, no text, no dialogue. CAMERA RULE: the camera starts with a slow drift and becomes COMPLETELY LOCKED OFF; only weather, light and nature move.
+
+Character (keep identical in Clip B): a young fictional woman in deep meditation, gentle delicate features, calm dark eyes, skin dusted and sun-warmed with natural micro-texture, long dark hair loosely tied, faded ochre cotton saree, rudraksha mala, bare feet. A distant snow peak carries a small golden trident on its summit under a crescent moon, shown as a symbol only.
+
+1 (0-4s) [Extreme wide 18mm, drifting then settling to a complete stop] Storm-blue Himalayan gorge, light flickering through seasons: sun, monsoon grey, snowfall. One tiny seated woman in ochre on a cliff rock, motionless.
+2 (4-8s) [Locked macro 100mm, time-lapse elements] Her dusty fingers resting on rudraksha beads. A green leaf lands beside her hand, dries, cracks and blows away. Her fingers do not move toward it.
+3 (8-12s) [Locked medium 50mm, time-lapse weather] She sits utterly still while snow settles on her shoulder and melts, dust coats her saree, rain streaks the rock. Seasons pass, she does not change. Birds burst past in the background.
+4 (12-15s) [Rack focus 85mm, locked] Her closed eyes in sharp focus, focus pulls to the distant snow peak: a thin thread of golden light climbs the peak to the small trident beneath a crescent moon.
+
+SOUND: wind and one held breath, soft bead clicks settling into a slow pulse, a single sustained choir note on shot 3 that cuts to silence, one distant low drum heartbeat on shot 4.</pre><button class="copy" data-t="pA">Copy Clip A</button></div></details>
+
+<details><summary>CLIP B · 15–31s — The River Waits (start frame: Keyframe 2)</summary><div class="promptbox"><pre id="pB">Photorealistic cinematic Hindu mythological epic, 16:9 horizontal, 1920x1080, 16 seconds, 4 shots with hard cuts. Large-format cinematography, deep focus, volumetric silver-blue light, real water caustics, anamorphic glow, 35mm film grain. Real photographic look, real water physics, NOT cartoon, NOT video game, NOT 3D render. All characters fictional adults. No violence, no text, no dialogue. CAMERA RULE: almost locked; one single 10cm slow push in shot 2 only.
+
+Character (identical to Clip A): a young fictional woman, gentle delicate features, calm dark eyes, dusted sun-warmed skin with natural micro-texture, long dark hair loosely tied, faded ochre cotton saree, rudraksha mala, bare feet. A real white bull appears as a calm animal.
+
+1 (15-20s) [Locked low wide 24mm] A colossal luminous silver river begins falling out of the clouds into the gorge, then STOPS in mid-air, hanging like a trembling canopy of water and hanging droplets above her. Birds swerve around it.
+2 (20-24s) [Slow push-in 35mm, very subtle] A real white bull steps out of mist at the water's edge, looks up at the suspended river, then toward the woman, waiting.
+3 (24-27s) [Extreme macro 100mm slow motion, then medium] One single silver drop falls in extreme slow motion and halts just above her hand. She rises slowly, dust cracking off her saree, and opens her palms upward.
+4 (27-31s) [Ultra-wide 16mm, speed ramp] The suspended river gently completes its fall, wrapping her in a slow luminous column of silver water; golden dust lifts off her into the light like motes. Fade to pure white.
+
+SOUND: rising water roar sliced to silence when the river stops, slow droplet ticks, a single bull bell note, her first deep breath in shot 3, a huge warm swell into the white-out on shot 4.</pre><button class="copy" data-t="pB">Copy Clip B</button></div></details>
+
+<details><summary>CLIP C · 31–45s — The Night Goes Home (start frame: Keyframe 3)</summary><div class="promptbox"><pre id="pC">Photorealistic cinematic Hindu mythological epic, 16:9 horizontal, 1920x1080, 14 seconds, 3 shots with hard cuts. Large-format cinematography, pearl-white silver and soft dawn-gold palette, volumetric light, real water caustics, gentle anamorphic glow, 35mm film grain. Real photographic look, real water and silk, NOT cartoon, NOT video game, NOT 3D render. All characters fictional adults. No violence, no text, no dialogue. CAMERA RULE: the camera now flows for the first time, slow floating movement in every shot.
+
+Character (keep identical in Clip D): the same young fictional woman transformed: luminous moonlit skin with natural micro-texture and dewy water beads, serene gentle expression, long loose damp dark hair with white jasmine flowers, pure white silk saree with thin silver border, white pearl and silver ornaments, small silver crown. Two arms in close-ups; in ONE wide shot only, four graceful arms calmly holding a small hourglass drum and a golden trident at rest.
+
+1 (31-36s) [Overhead crane 24mm, slow rotation and drift] A still Himalayan pool below dawn peaks. Ripples spread; white jasmine petals appear on the water. A dark translucent veil filled with tiny stars lifts slowly off the water surface and ascends into the sky like night dissolving upward, beautiful and peaceful.
+2 (36-40s) [Extreme close-up 135mm, slow push-in, shallow focus] Her face emerging from silver mist, luminous skin with water beads, gentle rim light, eyes slowly opening, the smallest serene smile. Two arms only.
+3 (40-45s) [Pull back to wide 28mm, floating gimbal] She rises from the pool in white silk, jasmine in her hair; in this single wide frame four arms are visible, small drum and trident held calmly at rest. White petals drift around her.
+
+SOUND: near-silence, soft wordless female hum over water on shot 1, one plucked string note as her eyes open, warm choir harmony swelling gently on shot 3.</pre><button class="copy" data-t="pC">Copy Clip C</button></div></details>
+
+<details><summary>CLIP D · 45–60s — The Bull Kneels / Blessing Loop (start frame: Keyframe 4)</summary><div class="promptbox"><pre id="pD">Photorealistic cinematic Hindu mythological epic, 16:9 horizontal, 1920x1080, 15 seconds, 3 shots with hard cuts. Large-format cinematography, crimson and antique-gold dawn over pearl-white and green, volumetric sunrise light, anamorphic flares, 35mm film grain. Real photographic look, real animal, real silk and flowers, NOT cartoon, NOT video game, NOT 3D render. All characters fictional adults. No violence, no text, no dialogue.
+
+Character (identical to Clip C): radiant young fictional woman, luminous moonlit skin with natural texture, serene gentle smile, long loose dark hair with white jasmine, pure white silk saree with thin silver border, pearl and silver ornaments, small silver crown, two arms. A real white bull, calm and gentle. A distant snow peak with a tiny golden trident as background symbol only.
+
+1 (45-50s) [Floating gimbal tracking, 24mm] She walks barefoot beside a silver river through a green Himalayan valley at dawn; small clusters of white jasmine open where her wet footprints touch the grass.
+2 (50-57s) [Low-angle slow orbit, 35mm anamorphic, sunrise backlight] The real white bull approaches her and slowly kneels, bowing its head. She rests one hand gently on its forehead. Behind them the snow peak catches crimson-gold sunrise and the tiny trident glints once.
+3 (57-60s) [Extreme close-up 85mm, locked off] She turns toward camera with a serene expression, raising one open palm toward the lens in a blessing gesture until the palm fills the centre of frame. Hold. Cut to black.
+
+SOUND: soft sitar-like plucked melody over flowing water on shot 1, one temple bell and a warm full chord as the bull kneels, music fading to a single water drop on the cut to black.</pre><button class="copy" data-t="pD">Copy Clip D</button></div></details>
+
+<div class="notice"><strong>Fallback ladder if a clip is blocked or fails</strong> (strip in this order, regenerate only that clip): ① four arms → two arms everywhere &nbsp;② white bull → mist and bell sound only &nbsp;③ face ECU → over-shoulder / hands &nbsp;④ “river stops in mid-air” → plainer wording: “a waterfall hangs motionless like glass above her.” Hardest shots remain the suspended river (B1) and the star-veil (C1) — generate those two first, alone, before spending credits on full clips.</div>
+</section>
+
+<section id="music" class="reveal">
+<div class="label">Sound &amp; Music</div><h2>Suno map — one track, four drops, one motif</h2>
+<div class="grid2">
+<div class="card"><h3>Ready-to-paste Suno style prompt</h3><pre style="max-height:none">Cinematic devotional orchestral, 60 seconds, no lyrics — wordless female hum and choir only. Tanpura drone, damru heartbeat pulse, temple bell, veena, low strings. Structure: near-silence and breath 0-8s, one sustained choir note 8-12s, silence 12-24s, intimate breath and single bell 24-27s, huge warm swell 27-31s, soft hum over water 31-36s, choir harmony resolving 36-42s, gentle veena flow 42-48s, single bell and full warm chord 50-57s, fade to one water drop. Emotional arc: endurance, surrender, blessing. Not EDM, no beats drop, no chanting of names.</pre><button class="copy" onclick="navigator.clipboard.writeText(this.previousElementSibling.innerText);this.textContent='Copied ✓'">Copy Suno prompt</button></div>
+<div class="card"><h3>The motif trick</h3><p>Use <strong>one choir note</strong> at Peak 1 (12s) that returns <strong>resolved into harmony</strong> at Peak 3 (42s). Viewers won't know why the transformation makes them emotional — that's why. The bull-bell at 20–24s sets the track's key: tune the Suno export so the bell and the choir agree, or replace the bell in your editor with a pitched sample.</p><br><h3>Mix notes</h3><ul><li>Peak 2 must be <em>quieter</em> than the shots around it — master the drop-halt (24–27s) at −12 LUFS below the swell. Silence is your loudest moment.</li><li>Keep 0.5s of true digital silence before the loop point. Platforms pad loops; silence makes the restart feel intentional.</li><li>Export a no-choir instrumental alt — some viewers repost with their own bhajan audio; give them a clean version to do it with (pinned comment).</li></ul></div>
+</div>
+</section>
+
+<section id="long" class="reveal">
+<div class="label">Expansion Map</div><h2>Where your 20–30s releases live: 90s &amp; 3-minute cuts</h2>
+<div class="grid2">
+<div class="card"><h3>90-second cut (+30s)</h3><ul><li><strong>+15s after Shot 2 — “U… mā!”:</strong> hands (mother, never face) reach in with fruit and leaves, withdraw refused. One dried leaf sequence becomes a refusal trilogy: fruit → leaves → water. This is now a <em>20s release</em> the 60s cut can't afford.</li><li><strong>+15s after Shot 11:</strong> she walks the valley blessing small things — a frozen stream thaws under her shadow, a trapped bird freed from ice. Proves the blessing before the bull confirms it.</li></ul></div>
+<div class="card"><h3>3-minute cut — three acts</h3><ul><li><strong>Act I (0–60s) The Refusal:</strong> palace silhouette left behind at dawn (one wide, no faces), the three refusals, seasons. First 25s release = winter held in one locked take.</li><li><strong>Act II (60–120s) The Test:</strong> an old ascetic's <em>shadow and voice only</em> mocks the unseen groom; she defends, weeping but unmoving — the film's only “dialogue” told in reaction close-ups. Shadow dissolves into the damaru heartbeat. Shiva present, never depicted — filter-safe and theologically elegant.</li><li><strong>Act III (120–180s) The Bath &amp; Blessing:</strong> my 60s Shots 5–13 stretched: the river's wait becomes a full 30s release of hanging droplets, and the kneeling plays in real time.</li></ul></div>
+</div>
+</section>
+
+<section id="post" class="reveal">
+<div class="label">Posting Pack</div><h2>Ship it</h2>
+<div class="grid3">
+<div class="card"><h3>Caption (steal this)</h3><p>She sat so still that the seasons gave up before she did. 🌙<br>And when the river of heaven finally came for her… it stopped, and waited for her to open her hands.<br><strong>Day 8 — Mata Mahagauri 🤍</strong> She who washes away every burden, like the Ganga washes the mountains.<br>Type <strong>JAI MATA DI</strong> to receive her blessing 🙏</p></div>
+<div class="card"><h3>Thumbnail &amp; title</h3><p><strong>Thumbnail:</strong> Keyframe 2, cropped tight on the halted drop above her open palm (works at 9:16 — the composition is centre-protected). Text ≤3 words: <em>“THE RIVER WAITED”</em>.<br><strong>Title:</strong> Why Did the Ganga Stop for Her? | Mata Mahagauri — Navratri Day 8</p></div>
+<div class="card"><h3>Comment hooks</h3><ul><li>Pinned: “The dark veil that leaves her has a name. Who knows it? 🌌” (summons the Kaushiki explainers = comments + watch-time)</li><li>“Did you notice the camera doesn't move for 30 seconds… like her?” (rewards rewatch)</li><li>Post the instrumental alt for bhajan edits.</li></ul></div>
+</div>
+<p class="sub" style="margin-top:22px">Hashtags: #Mahagauri #Navratri #Navadurga #JaiMataDi #Parvati #HinduMythology #AIFilm #MahagauriMaa #Day8Navratri · Post on Ashtami morning 5–7am IST for the aarti scroll, with the 9:16 centre-crop. Shoot 16:9, but keep her and the drop inside the centre 56% of frame in every prompt — one master, both feeds.</p>
+</section>
+
+</main>
+<footer><div class="wrap"><div><b style="font-family:Cinzel,serif;letter-spacing:.2em;color:#fff">MAHAGAURI</b><br>The Stillness That Moved a River — an alternative director's treatment.</div><div>Keyframes &amp; prompts are yours to shoot. May your river wait for you. 🤍</div></div></footer>
+
+<script>
+const peaks=[
+{t:"PEAK 1 · 12s — The Seasons Shot",b:"<strong>Peak by accumulation.</strong> Nothing explodes; time itself piles up on a woman who won't move. First Suno choir note here — one note, unresolved. <br><em>Release after:</em> 3s rack-focus to the peak (12–15s). Re-hook: a thread of light — who answered?"},
+{t:"PEAK 2 · 27s — The Drop That Doesn't Land",b:"<strong>Peak by subtraction.</strong> The river already stopped at 19s; now a single drop stops too. The peak is her decision to stand and open her palms. Quietest moment in the film = the one they'll rewind. <br><em>Release after:</em> the 31s white-out dissolves into the overhead pool. Re-hook: what is the dark veil rising?"},
+{t:"PEAK 3 · 42s — Moonlight, Recognised",b:"<strong>Peak by recognition.</strong> Same face, transformed light. The Peak-1 choir note returns in harmony. The single 2-second four-armed wide lives here — long enough to screenshot, short enough to stay elegant (and regenerable). <br><em>Release after:</em> flowing valley walk (42–48s). Re-hook: something large is approaching through the flowers."},
+{t:"PEAK 4 · 56s — The Bull Kneels, She Blesses You",b:"<strong>Peak by devotion.</strong> No explosion: an animal kneels, a bell rings, and the final abhaya hand turns from the bull to the audience. <br><em>Loop:</em> palm fills centre-frame → hard cut to black on one drop → Shot 1's bead-hand in the same position. The blessing hands you back to the beginning."}];
+const d=document.getElementById('peakDetail');const dots=document.querySelectorAll('.dot');
+function show(i){dots.forEach(x=>x.classList.remove('active'));dots[i].classList.add('active');d.innerHTML="<h3>"+peaks[i].t+"</h3><p style='color:#c8d8ea'>"+peaks[i].b+"</p>"}
+dots.forEach(x=>x.onclick=()=>show(+x.dataset.p));show(1);
+document.querySelectorAll('.copy[data-t]').forEach(b=>b.onclick=()=>{navigator.clipboard.writeText(document.getElementById(b.dataset.t).innerText);const o=b.textContent;b.textContent='Copied ✓';setTimeout(()=>b.textContent=o,1600)});
+const io=new IntersectionObserver(e=>e.forEach(x=>x.isIntersecting&&x.target.classList.add('on')),{threshold:.08});document.querySelectorAll('.reveal').forEach(x=>io.observe(x));
+</script>
+</body>
+</html>
