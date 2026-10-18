@@ -1,0 +1,15 @@
+[Script Info]
+ScriptType: v4.00+
+PlayResX: 1920
+PlayResY: 1080
+WrapStyle: 2
+
+[V4+ Styles]
+Format: Name, Fontname, Fontsize, PrimaryColour, SecondaryColour, OutlineColour, BackColour, Bold, Italic, Underline, StrikeOut, ScaleX, ScaleY, Spacing, Angle, BorderStyle, Outline, Shadow, Alignment, MarginL, MarginR, MarginV, Encoding
+Style: Mantra,Hind,96,&H007ACDEE,&H000000FF,&H14100800,&H96000000,1,0,0,0,100,100,0,0,1,2,3,5,60,60,120,1
+Style: Sub,Hind,50,&H006EB2D6,&H000000FF,&H14100800,&H96000000,0,0,0,0,100,100,0,0,1,2,3,5,60,60,120,1
+
+[Events]
+Format: Layer, Start, End, Style, Name, MarginL, MarginR, MarginV, Effect, Text
+Dialogue: 0,0:00:00.00,0:00:03.50,Mantra,,0,0,0,,{\fad(450,500)\an5\pos(960,455)}ॐ देवी सिद्धिदात्र्यै नमः
+Dialogue: 0,0:00:00.00,0:00:03.50,Sub,,0,0,0,,{\fad(450,500)\an5\pos(960,610)}॥ नवदुर्गा — नौवाँ रूप ॥
