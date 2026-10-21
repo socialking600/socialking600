@@ -12,3 +12,14 @@ My director's version of the Mata Mahagauri story: a 60-second cinematic AI-film
   `keyframe-01-tapas.jpg` · `keyframe-02-river-waits.jpg` · `keyframe-03-mahagauri.jpg` · `keyframe-04-bull-kneels.jpg`
 
 Open `index.html` in any browser, or serve: `python3 -m http.server 8080 --bind 0.0.0.0`
+
+---
+
+## GRAHAN — Studio Bible v1
+
+Brand, name and channel architecture for the AI film studio, built from a 10-question vision interview.
+
+- **`brand/index.html`** — the studio bible: the one-profile-vs-five verdict, all 6 name candidates scored, GRAHAN etymology + taglines, Rahu the avatar host, the founding myth, the four series (ANDHAAR / MACHINES / WORKS / CHHOTE ASUR), weekly grid, 90-day rollout with gates, copy-paste bios (EN/HI/GU), 15-minute handle + trademark check, and the pricing ladder.
+- **`brand/grahan-mark.svg`** — the eclipse logo mark (vector). Disc, corona, diamond ring.
+
+Open `brand/index.html` or serve the repo root and visit `/brand/`.

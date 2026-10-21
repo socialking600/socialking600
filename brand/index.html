@@ -1,0 +1,705 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>GRAHAN — Studio Bible v1 | Name, Identity &amp; 90-Day Rollout</title>
+<meta name="description" content="GRAHAN: an AI film studio identity built on eclipse mythology. Brand name rationale, avatar host, founding history, feed architecture, 90-day rollout, platform kit and pricing ladder.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="icon" type="image/svg+xml" href="grahan-mark.svg">
+<link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500;700;900&family=Inter:wght@400;500;600;700;800&family=Playfair+Display:ital,wght@0,600;1,500&family=Noto+Sans+Devanagari:wght@400;600&family=Noto+Sans+Gujarati:wght@400;600&display=swap" rel="stylesheet">
+<style>
+:root{
+  --ink:#f2ece2;--muted:#a89e92;--bg:#050506;--panel:#0d0c0b;--panel2:#141210;--line:#2a241d;
+  --gold:#f2c46d;--ember:#ff7a3c;--bone:#f4ece0;--ash:#bcb2a4;--deep:#000
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{background:var(--bg);color:var(--ink);font-family:Inter,system-ui,sans-serif;line-height:1.65;overflow-x:hidden}
+a{color:var(--gold)}img{display:block;max-width:100%}
+.hi{font-family:"Noto Sans Devanagari",Inter,sans-serif}
+.gu{font-family:"Noto Sans Gujarati",Inter,sans-serif}
+
+.nav{position:fixed;top:0;left:0;right:0;z-index:60;display:flex;justify-content:space-between;align-items:center;padding:13px 26px;background:rgba(5,5,6,.82);backdrop-filter:blur(14px);border-bottom:1px solid rgba(242,196,109,.14)}
+.nav b{font-family:Cinzel,serif;letter-spacing:.34em;font-size:.82rem;color:#fff}
+.nav b span{color:var(--ember)}
+.nav .links{display:flex;gap:16px;flex-wrap:wrap}
+.nav a{color:var(--muted);text-decoration:none;font-size:.74rem;font-weight:700;letter-spacing:.1em;text-transform:uppercase}
+.nav a:hover{color:var(--gold)}
+
+.btn{display:inline-flex;align-items:center;gap:8px;padding:12px 22px;border-radius:999px;border:1px solid rgba(255,255,255,.22);color:#fff;text-decoration:none;font-weight:700;font-size:.88rem;background:rgba(255,255,255,.05);cursor:pointer;font-family:Inter,sans-serif}
+.btn.gold{background:linear-gradient(135deg,#f2c46d,#e08a3c);color:#1a1205;border:none}
+.btn:hover{transform:translateY(-1px)}
+
+.hero{min-height:100vh;position:relative;display:flex;align-items:center;padding:120px 28px 70px;background:radial-gradient(ellipse at 72% 50%,#120a06 0%,#050506 58%)}
+.eclipse{position:absolute;right:-14%;top:50%;transform:translateY(-50%);width:min(78vw,860px);aspect-ratio:1;border-radius:50%;
+background:radial-gradient(circle at 50% 50%,#000 0 46%,#000 47%,rgba(255,248,235,.95) 49%,rgba(255,190,120,.9) 51.5%,rgba(255,122,60,.55) 56%,rgba(255,122,60,.14) 68%,transparent 76%);
+filter:blur(.4px);animation:breathe 9s ease-in-out infinite;pointer-events:none;z-index:0}
+.eclipse::after{content:"";position:absolute;inset:41%;border-radius:50%;background:#000;box-shadow:0 0 120px 40px rgba(255,122,60,.18)}
+@keyframes breathe{0%,100%{opacity:.85;transform:translateY(-50%) scale(1)}50%{opacity:1;transform:translateY(-50%) scale(1.03)}}
+.hero-in{position:relative;z-index:2;max-width:1200px;margin:0 auto;width:100%}
+.kicker{letter-spacing:.32em;text-transform:uppercase;font-size:.72rem;font-weight:700;color:var(--ember);margin-bottom:16px}
+h1{font-family:Cinzel,serif;font-weight:900;font-size:clamp(3.4rem,11vw,8rem);line-height:.9;letter-spacing:.06em;color:#fff;text-shadow:0 0 90px rgba(255,122,60,.25)}
+h1 em{font-family:"Playfair Display",serif;font-weight:500;font-style:italic;text-transform:none;letter-spacing:0;color:var(--bone);display:block;font-size:clamp(1.15rem,3vw,2rem);margin-top:22px;text-shadow:none}
+.logline{max-width:720px;font-size:1.1rem;color:#e3d9cb;margin:24px 0 18px}
+.meta{display:flex;gap:10px;flex-wrap:wrap;margin:18px 0 30px}
+.pill{border:1px solid rgba(242,196,109,.28);background:rgba(0,0,0,.4);padding:7px 14px;border-radius:999px;font-size:.78rem;font-weight:600;color:#efe5d6}
+
+.wrap{max-width:1200px;margin:0 auto;padding:0 28px}
+section{padding:82px 0 8px;scroll-margin-top:70px}
+h2{font-family:Cinzel,serif;font-size:clamp(1.6rem,4vw,2.5rem);letter-spacing:.03em;margin-bottom:12px}
+h3{font-size:1.1rem;margin-bottom:8px;color:#fff}
+.sub{color:var(--muted);max-width:860px;margin-bottom:26px;font-size:1rem}
+.label{letter-spacing:.3em;text-transform:uppercase;font-size:.7rem;font-weight:800;color:var(--ember);margin-bottom:10px}
+.grid2{display:grid;grid-template-columns:1fr 1fr;gap:18px}
+.grid3{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
+.grid4{display:grid;grid-template-columns:repeat(2,1fr);gap:18px}
+.card{background:linear-gradient(180deg,var(--panel2),var(--panel));border:1px solid var(--line);border-radius:18px;padding:24px}
+.card p,.card li{color:#c9c0b3;font-size:.95rem}
+.card ul{margin-left:18px;margin-top:8px}
+.card li{margin-bottom:6px}
+.num{font-family:Cinzel,serif;font-size:1.9rem;color:var(--gold);line-height:1;margin-bottom:10px}
+.quote{border-left:3px solid var(--ember);padding:12px 20px;background:rgba(255,122,60,.06);border-radius:0 14px 14px 0;font-family:"Playfair Display",serif;font-style:italic;font-size:1.18rem;color:var(--bone);margin:22px 0}
+.notice{background:rgba(242,196,109,.06);border:1px solid rgba(242,196,109,.26);border-radius:16px;padding:18px 20px;color:#f0e4cf;font-size:.95rem}
+.notice b{color:var(--gold)}
+.warn{background:rgba(255,122,60,.07);border:1px solid rgba(255,122,60,.3)}
+.warn b{color:var(--ember)}
+
+table{width:100%;border-collapse:collapse;font-size:.9rem;overflow:hidden;border-radius:14px}
+th,td{padding:12px 14px;border-bottom:1px solid var(--line);vertical-align:top;text-align:left}
+th{background:#1a1510;letter-spacing:.08em;text-transform:uppercase;font-size:.68rem;color:var(--gold)}
+tr:nth-child(even) td{background:rgba(255,255,255,.015)}
+td:first-child{font-weight:700;color:#fff}
+.scroll{overflow-x:auto;-webkit-overflow-scrolling:touch}
+
+/* verdict switch */
+.switch{display:flex;gap:8px;margin-bottom:16px;flex-wrap:wrap}
+.switch button{background:#12100d;border:1px solid var(--line);color:var(--muted);padding:10px 18px;border-radius:999px;font-weight:700;font-size:.82rem;cursor:pointer;font-family:Inter,sans-serif}
+.switch button.on{background:var(--gold);color:#1a1205;border-color:var(--gold)}
+.verdictbox{border:1px solid var(--line);border-radius:18px;padding:24px;background:var(--panel)}
+.verdictbox h3{font-family:Cinzel,serif;font-size:1.3rem;margin-bottom:10px}
+
+/* name cards */
+.namegrid{display:grid;grid-template-columns:repeat(2,1fr);gap:18px}
+.namecard{border:1px solid var(--line);border-radius:20px;padding:24px;background:linear-gradient(180deg,#141210,#0b0a09);position:relative;overflow:hidden}
+.namecard::before{content:"";position:absolute;top:-40%;right:-30%;width:70%;aspect-ratio:1;border-radius:50%;background:radial-gradient(circle,rgba(255,122,60,.12),transparent 70%)}
+.namecard.pick{border-color:rgba(242,196,109,.55);box-shadow:0 0 0 1px rgba(242,196,109,.15),0 24px 60px -30px rgba(242,196,109,.5)}
+.nm{font-family:Cinzel,serif;font-size:2rem;letter-spacing:.12em;color:#fff;line-height:1.1}
+.nm small{display:block;font-family:Inter,sans-serif;font-size:.78rem;letter-spacing:.16em;text-transform:uppercase;color:var(--gold);margin-top:8px}
+.badge{position:absolute;top:18px;right:18px;font-size:.62rem;letter-spacing:.2em;text-transform:uppercase;font-weight:800;padding:5px 10px;border-radius:999px;background:var(--gold);color:#171004}
+.badge.alt{background:#2a241d;color:var(--ash)}
+.meter{margin:14px 0 0}
+.mrow{display:grid;grid-template-columns:104px 1fr 26px;gap:10px;align-items:center;font-size:.74rem;color:var(--muted);margin-bottom:6px}
+.bar{height:6px;background:#241f19;border-radius:99px;overflow:hidden}
+.bar span{display:block;height:100%;background:linear-gradient(90deg,#8a5a24,var(--gold));border-radius:99px}
+.mrow b{color:var(--ash);font-size:.72rem;text-align:right}
+.namerisk{font-size:.85rem;color:#c9c0b3;margin-top:12px;border-top:1px dashed var(--line);padding-top:12px}
+.namerisk b{color:var(--ember)}
+
+/* etymology */
+.ety{display:grid;grid-template-columns:repeat(2,1fr);gap:14px;margin:18px 0}
+.ety div{border:1px solid var(--line);border-radius:14px;padding:16px;background:#0b0a09}
+.ety strong{display:block;color:var(--gold);font-family:Cinzel,serif;letter-spacing:.08em;margin-bottom:4px;font-size:.95rem}
+.ety span{font-size:.9rem;color:#c9c0b3}
+
+/* wordmark */
+.wordmark{border:1px solid var(--line);border-radius:22px;padding:44px 24px;text-align:center;background:radial-gradient(ellipse at 50% 130%,#1a1108,#070706 65%)}
+.wordmark .mark{display:block;margin:0 auto 24px;filter:drop-shadow(0 0 40px rgba(255,122,60,.35))}
+.wordmark .wm{font-family:Cinzel,serif;font-weight:900;font-size:clamp(2.2rem,9vw,5.2rem);letter-spacing:.22em;color:var(--bone);line-height:1}
+.wordmark .wmsub{font-size:.72rem;letter-spacing:.5em;text-transform:uppercase;color:var(--ember);margin-top:16px}
+.wordmark .wmline{margin-top:22px;color:var(--muted);font-size:.9rem;font-style:italic;font-family:"Playfair Display",serif}
+
+/* host */
+.host{display:grid;grid-template-columns:320px 1fr;gap:22px;align-items:start}
+.silhouette{aspect-ratio:3/4;border-radius:18px;border:1px solid var(--line);position:relative;overflow:hidden;background:radial-gradient(circle at 50% 32%,#241a12 0%,#0a0908 55%,#000 100%)}
+.silhouette .fig{position:absolute;left:50%;bottom:-4%;transform:translateX(-50%);width:74%;height:96%;border-radius:48% 48% 12% 12%/38% 38% 8% 8%;background:linear-gradient(180deg,#050403,#000 62%,#050403);box-shadow:0 0 0 1px rgba(242,196,109,.12),0 0 70px rgba(255,122,60,.16)}
+.silhouette .eye{position:absolute;left:50%;top:34%;transform:translateX(-50%);width:52%;height:2px;background:linear-gradient(90deg,transparent,rgba(242,196,109,.85),transparent);box-shadow:0 0 18px 3px rgba(242,196,109,.5)}
+.silhouette .cap{position:absolute;bottom:12px;left:0;right:0;text-align:center;font-size:.62rem;letter-spacing:.28em;text-transform:uppercase;color:var(--ash)}
+
+/* feed grid */
+.week{display:grid;grid-template-columns:repeat(7,1fr);gap:8px;margin-top:16px}
+.day{border:1px solid var(--line);border-radius:14px;padding:12px 10px;background:#0b0a09;min-height:112px}
+.day b{display:block;font-size:.64rem;letter-spacing:.18em;text-transform:uppercase;color:var(--muted);margin-bottom:8px}
+.day span{display:block;font-size:.78rem;color:#fff;font-weight:700;line-height:1.3}
+.day em{display:block;font-size:.68rem;color:var(--ember);font-style:normal;margin-top:6px}
+.day.myth{border-color:rgba(242,196,109,.4);background:linear-gradient(180deg,#191207,#0b0a09)}
+.day.work{border-color:rgba(255,122,60,.32)}
+
+/* phases */
+.phase{position:relative;padding-left:26px;border-left:1px solid var(--line);margin-bottom:26px}
+.phase::before{content:"";position:absolute;left:-5px;top:6px;width:9px;height:9px;border-radius:50%;background:var(--ember);box-shadow:0 0 14px 3px rgba(255,122,60,.5)}
+.phase h4{font-family:Cinzel,serif;font-size:1.1rem;letter-spacing:.06em;color:#fff;margin-bottom:6px}
+.phase .days{font-size:.7rem;letter-spacing:.2em;text-transform:uppercase;color:var(--gold);margin-bottom:8px}
+
+/* bios */
+.bio{margin-bottom:16px;border:1px solid var(--line);border-radius:16px;overflow:hidden;background:#0b0a09}
+.bio .bhead{display:flex;justify-content:space-between;align-items:center;gap:10px;padding:11px 16px;background:#171310;border-bottom:1px solid var(--line)}
+.bio .bhead b{font-size:.74rem;letter-spacing:.16em;text-transform:uppercase;color:var(--gold)}
+.copy{background:var(--gold);color:#171005;border:none;padding:6px 13px;border-radius:999px;font-weight:800;cursor:pointer;font-size:.7rem;letter-spacing:.08em;text-transform:uppercase;font-family:Inter,sans-serif}
+.copy:active{transform:scale(.96)}
+.bio pre{white-space:pre-wrap;padding:16px;font-family:Inter,sans-serif;font-size:.92rem;color:#e6ddcf;line-height:1.6}
+
+details{background:var(--panel);border:1px solid var(--line);border-radius:16px;margin-bottom:12px;overflow:hidden}
+summary{cursor:pointer;padding:16px 20px;font-weight:700;list-style:none;color:#fff}
+summary::-webkit-details-marker{display:none}
+summary:hover{color:var(--gold)}
+details .inner{padding:0 20px 18px;color:#c9c0b3;font-size:.94rem}
+
+.check li{list-style:none;padding-left:26px;position:relative;margin-bottom:9px;color:#c9c0b3;font-size:.94rem}
+.check li::before{content:"○";position:absolute;left:0;color:var(--ember);font-weight:800}
+.check li.done::before{content:"●";color:var(--gold)}
+
+footer{margin-top:90px;padding:40px 28px 60px;border-top:1px solid var(--line);color:var(--muted);font-size:.85rem}
+footer .wrap{display:flex;justify-content:space-between;gap:20px;flex-wrap:wrap;padding:0}
+.reveal{opacity:0;transform:translateY(16px);transition:.7s ease}
+.reveal.on{opacity:1;transform:none}
+@media(max-width:960px){.host{grid-template-columns:1fr}.namegrid{grid-template-columns:1fr}.ety{grid-template-columns:1fr}.week{grid-template-columns:repeat(2,1fr)}}
+@media(max-width:860px){.grid2,.grid3,.grid4{grid-template-columns:1fr}.nav .links{display:none}.eclipse{right:-40%;width:120vw;opacity:.55}td:first-child{white-space:normal}}
+</style>
+</head>
+<body>
+
+<nav class="nav">
+  <b>GRA<span>H</span>AN</b>
+  <div class="links">
+    <a href="#verdict">Verdict</a><a href="#decoded">Answers</a><a href="#names">Names</a><a href="#thename">The Name</a>
+    <a href="#host">Host</a><a href="#history">History</a><a href="#feed">Feed</a><a href="#ninety">90 Days</a><a href="#kit">Kit</a><a href="#money">Money</a><a href="#rules">Rules</a>
+  </div>
+</nav>
+
+<header class="hero">
+  <div class="eclipse"></div>
+  <div class="hero-in">
+    <div class="kicker">Studio Bible · v1 · Built from your 10 answers</div>
+    <h1>GRAHAN<em>Films from the shadow of the sun.</em></h1>
+    <p class="logline"><strong>The short answer to your question:</strong> no, you do not need five accounts. You need <em>one</em> studio with a pillar system and a single look — plus one spin-off account <em>later</em>, and only for the cartoon. The name is <strong>GRAHAN</strong> (ग्रहण / ગ્રહણ): the eclipse. It is dark, mythic, Gujarati, pronounceable in three languages, and — critically — it costs you nothing when you put it on a ₹2,00,000 invoice.</p>
+    <div class="meta">
+      <span class="pill">Mythology anchor</span><span class="pill">Dark cinematic</span><span class="pill">Named avatar host</span>
+      <span class="pill">Vadodara → global</span><span class="pill">Solo, full-time</span><span class="pill">Clients via IG DM</span>
+    </div>
+    <a class="btn gold" href="#verdict">Start with the account verdict ↓</a>
+    <a class="btn" href="#names">Skip to the 6 names</a>
+  </div>
+</header>
+
+<main class="wrap">
+
+<!-- 01 VERDICT -->
+<section id="verdict" class="reveal">
+  <div class="label">01 · The decision you asked about</div>
+  <h2>One profile or five?</h2>
+  <p class="sub">Your instinct was "one". Your instinct is right — but only if you understand <em>why</em> mixed feeds usually die, because it is not the reason most people think.</p>
+
+  <div class="switch" role="tablist" aria-label="Compare account structures">
+    <button class="on" data-view="one">1 studio account</button>
+    <button data-view="five">5 genre accounts</button>
+    <button data-view="why">Why mixed feeds actually fail</button>
+  </div>
+  <div class="verdictbox" id="verdictBox"></div>
+
+  <div class="grid3" style="margin-top:18px">
+    <div class="card"><div class="num">1</div><h3>One identity, one grade</h3><p>Every post — myth, car, ad, cartoon — goes through the same darkness, the same title card, the same 1.5s eclipse sting. The <em>subject</em> changes; the <em>studio</em> never does. That is what makes a mixed feed read as range instead of chaos.</p></div>
+    <div class="card"><div class="num">2</div><h3>Pillars, not moods</h3><p>A fixed weekly ratio does the work an algorithm manager would do. Myth is the magnet, machines are the proof, ads are the money, cartoon is the mascot. The audience learns the rhythm in three weeks.</p></div>
+    <div class="card"><div class="num">3</div><h3>Spin off only a character</h3><p>The one thing that earns its own account is a <em>character with a daily POV</em> — your 3D cartoon. A topic does not deserve an account; a personality does. Earliest: month 4, and only if the shorts travel on the hub first.</p></div>
+  </div>
+
+  <h3 style="margin-top:34px">Where each of your five genres actually lives</h3>
+  <div class="scroll">
+  <table>
+    <tr><th>Lane</th><th>Lives on</th><th>Share of feed</th><th>Its job</th><th>Graduates to its own account?</th></tr>
+    <tr><td>Mythology / devotional</td><td>Hub</td><td>~50%</td><td>Reach + emotional shareability + the reason anyone remembers you</td><td>No — this is the brand</td></tr>
+    <tr><td>Automobile / spec films</td><td>Hub</td><td>~20%</td><td>Proof of craft. This is what an agency forwards to a client</td><td>No</td></tr>
+    <tr><td>Ads / UGC</td><td>Hub, as <strong>WORKS</strong> series</td><td>~20%</td><td>Proof of results. Never framed as "content", always as work</td><td>No — a service is not an identity</td></tr>
+    <tr><td>3D cartoon</td><td>Hub now → own account month 4+</td><td>~10% → 0%</td><td>Fast growth, mascot energy, brand-friendly comedy</td><td><strong>Yes</strong> — it is a character</td></tr>
+    <tr><td>BTS / process</td><td>Stories + 1 carousel</td><td>—</td><td>Trust. Clients buy the person who shows the work</td><td>No</td></tr>
+  </table>
+  </div>
+  <div class="notice" style="margin-top:20px"><b>The rule that matters more than any of this:</b> a client who lands on your profile should see <em>one studio that can do anything</em> — not <em>a person who tries everything</em>. The difference is 100% in the consistency of the look and the naming of the series. Series names do the sorting for you: <strong>GRAHAN MYTHS · EP 04</strong>, <strong>MACHINES · 01</strong>, <strong>WORKS · D2C</strong>, <strong>CHHOTE ASUR · 07</strong>.</div>
+</section>
+
+<!-- 02 DECODED -->
+<section id="decoded" class="reveal">
+  <div class="label">02 · Your answers, decoded</div>
+  <h2>What you told me, and what it costs you if ignored</h2>
+  <p class="sub">Ten answers, ten consequences. This is the part most people skip and then wonder why year one produces nothing.</p>
+  <div class="scroll">
+  <table>
+    <tr><th>Your answer</th><th>What it actually commits you to</th><th>The trap</th></tr>
+    <tr><td>Big studio, high-ticket clients</td><td>You must look like a company from day 1: name, email, one-page site, invoice, showreel, no "DM for collab" energy.</td><td>Chasing followers instead of <em>three case studies</em>. Followers do not sign invoices.</td></tr>
+    <tr><td>AI avatar host</td><td>The avatar is an asset, not a filter. Same face, same silhouette, same voice, forever. It needs a name and a <em>job</em>.</td><td>Changing the avatar every video. Ten avatars = zero recall = you have no brand, just a render folder.</td></tr>
+    <tr><td>One profile</td><td>Correct — with pillar discipline and series labels.</td><td>Posting five genres with no naming system. That reads as "repost page", not "studio".</td></tr>
+    <tr><td>Gujarati · Hindi · English</td><td>Gujarati is the <em>soul</em>, Hindi is the <em>reach</em>, English is the <em>invoice</em>. One language per asset — never mixed in one caption.</td><td>Three languages in one post. Nobody feels spoken to.</td></tr>
+    <tr><td>"Edgy"</td><td>The edge lives in the work, the grade and the host — not in the legal name. Names can be clean and still terrifying.</td><td>A name so edgy it scares the client with the budget.</td></tr>
+    <tr><td>Full-time, 40+ hrs, solo</td><td>You have no excuse for inconsistency. Batch two weeks ahead, always.</td><td>Treating it like a hobby calendar and burning out in week 6.</td></tr>
+    <tr><td>Mythology anchor</td><td>Your first 90 days are decided. Everything else supports it.</td><td>Launching with UGC first because it feels easier. It resets your audience signal to zero.</td></tr>
+    <tr><td>Named character host</td><td>A mascot is a moat. A mascot + mythology is a <em>franchise</em>.</td><td>Making the host a talking presenter who explains the film. Narrators who explain kill mystery.</td></tr>
+    <tr><td>Clients from IG DMs</td><td>Your funnel is: pinned reel → HIRE highlight → keyword DM → 3-question brief → 50% advance.</td><td>DMs die in the "requests" folder. You need a keyword and a reason to be messaged.</td></tr>
+    <tr><td>Dark cinematic</td><td>Darkness is not only taste — it is a <strong>production advantage</strong>. See below.</td><td>Assuming dark = low effort. Dark is harder to light, easier to cheat.</td></tr>
+  </table>
+  </div>
+  <div class="notice warn" style="margin-top:22px"><b>The insight I would not trade:</b> AI video breaks on bright, busy, human-close-up frames — skin, hands, crowds, sunlight. Darkness <em>hides artifacts, sells scale, and cuts render time</em>. You have accidentally chosen the single most AI-friendly aesthetic in cinema: silhouette, rim light, smoke, embers, one practical light source. A dark mythic brand is cheaper to produce <em>and</em> looks more expensive. Most people pick that combination backwards.</div>
+</section>
+
+<!-- 03 NAMES -->
+<section id="names" class="reveal">
+  <div class="label">03 · The shortlist</div>
+  <h2>Six names, scored honestly</h2>
+  <p class="sub">Scored on five things that actually matter: <strong>edge</strong>, <strong>mythic depth</strong>, <strong>client credibility</strong>, <strong>ownability</strong> (can you trademark it and get handles), and <strong>ear</strong> — how it sounds in Gujarati, Hindi and English. <span style="color:var(--ember)">I could not check handle availability from here — the checklist in section 09 tells you exactly how, in 15 minutes.</span></p>
+
+  <div class="namegrid">
+    <div class="namecard pick">
+      <span class="badge">My pick</span>
+      <div class="nm">GRAHAN<small>ग्रहण · ગ્રહણ · the eclipse</small></div>
+      <div class="meter">
+        <div class="mrow"><span>Edge</span><div class="bar"><span style="width:88%"></span></div><b>9</b></div>
+        <div class="mrow"><span>Mythic depth</span><div class="bar"><span style="width:90%"></span></div><b>9</b></div>
+        <div class="mrow"><span>Client trust</span><div class="bar"><span style="width:92%"></span></div><b>9</b></div>
+        <div class="mrow"><span>Ownability</span><div class="bar"><span style="width:80%"></span></div><b>8</b></div>
+        <div class="mrow"><span>Ear (GU/HI/EN)</span><div class="bar"><span style="width:96%"></span></div><b>10</b></div>
+      </div>
+      <p class="namerisk" style="border-top:none;padding-top:10px">Two syllables, one hard consonant, spells itself after hearing it once. Carries astronomy, not a deity — so it is safe for devotional work <em>and</em> car commercials on the same feed. <b>Risk:</b> the word is also used for horoscope content, so you must own the handle and the logo lock-up fast.</p>
+    </div>
+
+    <div class="namecard">
+      <span class="badge alt">Runner-up</span>
+      <div class="nm">TAMAS<small>तमस · darkness, the night-guna</small></div>
+      <div class="meter">
+        <div class="mrow"><span>Edge</span><div class="bar"><span style="width:72%"></span></div><b>7</b></div>
+        <div class="mrow"><span>Mythic depth</span><div class="bar"><span style="width:92%"></span></div><b>9</b></div>
+        <div class="mrow"><span>Client trust</span><div class="bar"><span style="width:86%"></span></div><b>9</b></div>
+        <div class="mrow"><span>Ownability</span><div class="bar"><span style="width:62%"></span></div><b>6</b></div>
+        <div class="mrow"><span>Ear (GU/HI/EN)</span><div class="bar"><span style="width:88%"></span></div><b>9</b></div>
+      </div>
+      <p class="namerisk"><b>Why not:</b> "tamas" also means inertia/laziness in everyday Gujarati. That is a bad thing for a studio to be called when a client is deciding if you will deliver on time. Elegant, literary, slightly passive.</p>
+    </div>
+
+    <div class="namecard">
+      <span class="badge alt">Max edge</span>
+      <div class="nm">VETAL<small>वेताल · the spirit who tells stories</small></div>
+      <div class="meter">
+        <div class="mrow"><span>Edge</span><div class="bar"><span style="width:96%"></span></div><b>10</b></div>
+        <div class="mrow"><span>Mythic depth</span><div class="bar"><span style="width:88%"></span></div><b>9</b></div>
+        <div class="mrow"><span>Client trust</span><div class="bar"><span style="width:52%"></span></div><b>5</b></div>
+        <div class="mrow"><span>Ownability</span><div class="bar"><span style="width:78%"></span></div><b>8</b></div>
+        <div class="mrow"><span>Ear (GU/HI/EN)</span><div class="bar"><span style="width:84%"></span></div><b>8</b></div>
+      </div>
+      <p class="namerisk"><b>Why not:</b> it is a corpse-spirit. Perfect for horror, awkward for a D2C brand buying a ₹40,000 launch reel. <b>Keep it as a series name instead</b> — "VETAL" is a brilliant title for your dark myth anthology, and titles have no downside.</p>
+    </div>
+
+    <div class="namecard">
+      <span class="badge alt">Sleeper</span>
+      <div class="nm">NAZAR<small>नज़र · નજર · the gaze, the evil eye</small></div>
+      <div class="meter">
+        <div class="mrow"><span>Edge</span><div class="bar"><span style="width:78%"></span></div><b>8</b></div>
+        <div class="mrow"><span>Mythic depth</span><div class="bar"><span style="width:58%"></span></div><b>6</b></div>
+        <div class="mrow"><span>Client trust</span><div class="bar"><span style="width:84%"></span></div><b>8</b></div>
+        <div class="mrow"><span>Ownability</span><div class="bar"><span style="width:48%"></span></div><b>5</b></div>
+        <div class="mrow"><span>Ear (GU/HI/EN)</span><div class="bar"><span style="width:88%"></span></div><b>9</b></div>
+      </div>
+      <p class="namerisk"><b>Why not:</b> on-the-nose for a camera brand, already crowded (a hit TV serial), and it sounds like a lens brand rather than a studio. Good word, weak moat.</p>
+    </div>
+
+    <div class="namecard">
+      <span class="badge alt">Too heavy</span>
+      <div class="nm">PRALAY<small>प्रलय · dissolution, the flood</small></div>
+      <div class="meter">
+        <div class="mrow"><span>Edge</span><div class="bar"><span style="width:88%"></span></div><b>9</b></div>
+        <div class="mrow"><span>Mythic depth</span><div class="bar"><span style="width:90%"></span></div><b>9</b></div>
+        <div class="mrow"><span>Client trust</span><div class="bar"><span style="width:60%"></span></div><b>6</b></div>
+        <div class="mrow"><span>Ownability</span><div class="bar"><span style="width:70%"></span></div><b>7</b></div>
+        <div class="mrow"><span>Ear (GU/HI/EN)</span><div class="bar"><span style="width:86%"></span></div><b>9</b></div>
+      </div>
+      <p class="namerisk"><b>Why not:</b> everything you make becomes "apocalypse content". A studio called Pralay cannot make a cute 3D cartoon for a kids' brand without sounding absurd. Great for one series; too big a flag to live under.</p>
+    </div>
+
+    <div class="namecard">
+      <span class="badge alt">Regional</span>
+      <div class="nm">ANDHAAR<small>અંધાર · अंधार · the dark</small></div>
+      <div class="meter">
+        <div class="mrow"><span>Edge</span><div class="bar"><span style="width:82%"></span></div><b>8</b></div>
+        <div class="mrow"><span>Mythic depth</span><div class="bar"><span style="width:56%"></span></div><b>6</b></div>
+        <div class="mrow"><span>Client trust</span><div class="bar"><span style="width:70%"></span></div><b>7</b></div>
+        <div class="mrow"><span>Ownability</span><div class="bar"><span style="width:86%"></span></div><b>9</b></div>
+        <div class="mrow"><span>Ear (GU/HI/EN)</span><div class="bar"><span style="width:66%"></span></div><b>7</b></div>
+      </div>
+      <p class="namerisk"><b>Why not:</b> most ownable of the six, and I nearly picked it — but it caps you at a regional ceiling and a horror connotation. It is, however, the <strong>perfect name for your flagship mythology series</strong>. Use it there.</p>
+    </div>
+  </div>
+
+  <div class="notice" style="margin-top:20px"><b>One name I ruled out on purpose:</b> KAAL. Four letters, maximum meaning (time, death, yesterday, tomorrow). It is also the most crowded word in Indian dark content — dozens of pages, a film, a thousand edits. You would be the ninth Kaal, not the first Grahan.</div>
+</section>
+
+<!-- 04 THE NAME -->
+<section id="thename" class="reveal">
+  <div class="label">04 · The name</div>
+  <h2>GRAHAN</h2>
+  <div class="wordmark">
+    <svg class="mark" viewBox="0 0 512 512" width="132" height="132" role="img" aria-label="GRAHAN eclipse mark">
+      <defs>
+        <radialGradient id="gCorona" cx="50%" cy="50%" r="50%">
+          <stop offset="0.54" stop-color="#ffb457" stop-opacity="0"/>
+          <stop offset="0.68" stop-color="#ffb457" stop-opacity="0.50"/>
+          <stop offset="0.77" stop-color="#ff7a3c" stop-opacity="0.22"/>
+          <stop offset="0.90" stop-color="#ff7a3c" stop-opacity="0.06"/>
+          <stop offset="1" stop-color="#ff7a3c" stop-opacity="0"/>
+        </radialGradient>
+        <radialGradient id="gDisc" cx="50%" cy="50%" r="50%">
+          <stop offset="0.90" stop-color="#080706"/><stop offset="1" stop-color="#000000"/>
+        </radialGradient>
+        <radialGradient id="gFlare" cx="50%" cy="50%" r="50%">
+          <stop offset="0" stop-color="#ffffff"/>
+          <stop offset="0.30" stop-color="#fff3d6" stop-opacity="0.90"/>
+          <stop offset="0.65" stop-color="#ffc074" stop-opacity="0.35"/>
+          <stop offset="1" stop-color="#ffb457" stop-opacity="0"/>
+        </radialGradient>
+        <filter id="fSoft" x="-60%" y="-60%" width="220%" height="220%"><feGaussianBlur stdDeviation="7"/></filter>
+        <filter id="fSoft2" x="-60%" y="-60%" width="220%" height="220%"><feGaussianBlur stdDeviation="2.2"/></filter>
+      </defs>
+      <circle cx="256" cy="256" r="198" fill="url(#gCorona)"/>
+      <circle cx="256" cy="256" r="152" fill="none" stroke="#ff8a3c" stroke-opacity="0.60" stroke-width="11" filter="url(#fSoft)"/>
+      <circle cx="256" cy="256" r="152" fill="url(#gDisc)"/>
+      <circle cx="256" cy="256" r="152" fill="none" stroke="#ffd79a" stroke-width="2.4" filter="url(#fSoft2)"/>
+      <circle cx="256" cy="256" r="152" fill="none" stroke="#fff6e2" stroke-width="1.05"/>
+      <g transform="translate(363.5 148.5)">
+        <circle r="30" fill="url(#gFlare)" opacity="0.95"/>
+        <g stroke="#ffffff" stroke-linecap="round" opacity="0.92">
+          <line x1="-34" y1="0" x2="34" y2="0" stroke-width="1.5"/>
+          <line x1="0" y1="-34" x2="0" y2="34" stroke-width="1.5"/>
+          <line x1="-19" y1="-19" x2="19" y2="19" stroke-width="1" opacity="0.45"/>
+          <line x1="-19" y1="19" x2="19" y2="-19" stroke-width="1" opacity="0.45"/>
+        </g>
+      </g>
+    </svg>
+    <div class="wm">GRAHAN</div>
+    <div class="wmsub">AI Film Studio</div>
+    <div class="wmline">Films from the shadow of the sun.</div>
+  </div>
+  <p class="sub" style="margin-top:18px">The mark is three things stacked: the <strong>disc</strong> (the story swallowing the light), the <strong>corona</strong> (the world still burning behind it), and the <strong>diamond ring</strong> at upper right (the single second where everything is possible). No letterforms inside — it survives at 16px as a profile picture and at 16 feet as a backdrop. Vector file: <code>brand/grahan-mark.svg</code>.</p>
+
+  <p class="sub" style="margin-top:26px">Four meanings stack in one word. That is what makes a name survive a decade — not cleverness, but <em>depth</em>.</p>
+  <div class="ety">
+    <div><strong>ग्रहण · the eclipse</strong><span>The moment light is swallowed. Dark, cinematic, astronomical — and the one celestial event all of India steps outside to watch <em>at the same time</em>.</span></div>
+    <div><strong>ग्रहण करना · to receive</strong><span>To accept, to grasp, to take in. A studio that <em>receives</em> stories rather than manufacturing them.</span></div>
+    <div><strong>ग्रह · the planet that holds</strong><span>Rahu and Ketu — the eclipse-makers of Indian myth. Mythic without naming a deity, so no devotional risk.</span></div>
+    <div><strong>ગ્રહણ · the Gujarati ear</strong><span>Two syllables, soft "r", hard "hn". A Vadodara aunty can say it, a Mumbai agency can spell it, an American client can pronounce it by the third try.</span></div>
+  </div>
+
+  <div class="grid2" style="margin-top:8px">
+    <div class="card"><h3>Why there is no "AI" in the name</h3><p>AI is a <strong>tool</strong>, not a promise. In three years "AI studio" will sound the way "digital agency" sounds now — true of everyone, differentiating for no one. Worse: the moment a client hears "AI" before "film", they price you as a software user, not a director. Keep AI in the bio, the service page and the sales conversation. Keep it out of the name, the handle and the logo lock-up.</p></div>
+    <div class="card"><h3>Why not a god's name</h3><p>Your anchor genre is devotional. A studio named after a deity creates three problems at once: trademark friction (religious names are restricted), audience sensitivity when you use the same name for a car ad, and a ceiling on how dark the work can go. <strong>GRAHAN is astronomy, not theology</strong> — it can bless a Mahagauri film and sell a sedan in the same week without contradiction.</p></div>
+  </div>
+
+  <div class="quote">"Every AI video I see is full of light — glowing gods, glowing cars, glowing everything. Nobody is filming the dark." — the founding sentence.</div>
+
+  <h3 style="margin-top:30px">Taglines, per job</h3>
+  <div class="scroll">
+  <table>
+    <tr><th>Where it is used</th><th>Line</th><th>Why</th></tr>
+    <tr><td>Master line</td><td>Films from the shadow of the sun.</td><td>Cinematic, dark, epic, no jargon. Works as a website hero and a YouTube banner.</td></tr>
+    <tr><td>Client pitch</td><td>Myths and machines.</td><td>Four words that explain the whole range: mythology, cars, ads, cartoon. Agencies love a studio they can summarise.</td></tr>
+    <tr><td>Hindi</td><td class="hi">सूरज को निगलने वाले।</td><td>"Those who swallow the sun." Edgy, memorable, slightly dangerous — exactly your chosen flavour.</td></tr>
+    <tr><td>Gujarati</td><td class="gu">અંધારમાંથી કથા.</td><td>"A story out of the dark." Roots the brand in Gujarat without sounding regional-only.</td></tr>
+    <tr><td>Host sign-off</td><td>Ab andhera bolta hai.</td><td>"Now the dark speaks." Said by the avatar at the end of every film — it becomes your audio logo.</td></tr>
+  </table>
+  </div>
+</section>
+
+<!-- 05 HOST -->
+<section id="host" class="reveal">
+  <div class="label">05 · The host</div>
+  <h2>Rahu — the one who swallows the light</h2>
+  <p class="sub">You asked for a named recurring character. Here is the design brief. Everything below exists to solve a real production problem, not just to look cool.</p>
+
+  <div class="host">
+    <div class="silhouette">
+      <div class="fig"></div><div class="eye"></div><div class="cap">Rahu · always half-lit</div>
+    </div>
+    <div>
+      <div class="card" style="margin-bottom:14px"><h3>Why a silhouette, not a face</h3><p>AI video still drifts on faces between generations. A hooded, half-lit, rim-lit figure with a serpent motif is <strong>the most reusable character design in existence</strong> — every render looks intentional because you never see enough of the face to break continuity. You get a mascot, a logo, and a production cheat code in one decision.</p></div>
+      <div class="grid2">
+        <div class="card"><h3>His job</h3><p>He is the <em>narrator who refuses to explain</em>. One line at the top, one line at the end. Never a presenter, never a tour guide. Mystery is the product.</p></div>
+        <div class="card"><h3>The Swallow</h3><p>Every single film ends the same way: the light is drawn out of frame into his mouth, the frame goes black, and the GRAHAN mark appears for 1 second. <strong>A free, loopable, unmistakable brand device.</strong></p></div>
+      </div>
+      <div class="notice warn" style="margin-top:14px"><b>Sensitivity guardrail:</b> Rahu is an astrological entity, and some viewers will be protective of it. Rule: he may never be shown as a villain <em>and</em> never as a god. He is a <em>narrator</em> — a shadow that speaks. If you are not comfortable, the alternate name is <strong>CHHAYA</strong> (છાયા, the shadow): identical design, zero theological friction, and honestly an easier sell to brand clients.</div>
+    </div>
+  </div>
+</section>
+
+<!-- 06 HISTORY -->
+<section id="history" class="reveal">
+  <div class="label">06 · The history</div>
+  <h2>You asked to create a history. Here is the founding myth.</h2>
+  <p class="sub">Pin this. Put it on the About page. Read it at the top of every pitch deck. A studio without an origin story is a freelancer with a logo.</p>
+
+  <div class="card" style="padding:30px">
+    <p style="font-family:'Playfair Display',serif;font-size:1.12rem;line-height:1.85;color:#e6ddcf">
+    In 2025, a director in Vadodara noticed something about every AI video he was being shown.<br><br>
+    They were all full of light. Glowing gods. Glowing cars. Glowing everything, all at once, all the time — as if the only thing a new camera could do was turn the brightness up.<br><br>
+    Nobody was filming the dark.<br><br>
+    So he began with the one image every Indian already knows without being taught: the moon going black. Rahu opening his mouth. The whole country walking out onto their terraces at the same second, looking up at the same sky, holding their breath for something they had seen a hundred times and still could not explain.<br><br>
+    <em>That is what a film is supposed to do. Not glow. Make everyone look up at once.</em><br><br>
+    He named the studio after that second — the one where the light disappears and a hundred crore people go quiet together. GRAHAN.<br><br>
+    We do not light our stories. We eclipse them.
+    </p>
+  </div>
+
+  <div class="grid3" style="margin-top:22px">
+    <div class="card"><div class="num">2026</div><h3>One studio, one look</h3><p>Myth episodes every Mon/Wed/Fri. Three spec films. First five paying clients from DMs and direct pitches.</p></div>
+    <div class="card"><div class="num">2027</div><h3>A body of work</h3><p>Twelve-episode myth season, one branded mythic campaign for a real client, cartoon spin-off account live, first international job.</p></div>
+    <div class="card"><div class="num">2028</div><h3>A name in AI filmmaking</h3><p>GRAHAN is what an agency in Mumbai or Dubai says when a brief needs mythic scale and no one wants to shoot it. Retainers, not projects.</p></div>
+  </div>
+</section>
+
+<!-- 07 FEED -->
+<section id="feed" class="reveal">
+  <div class="label">07 · The feed</div>
+  <h2>Architecture: four series, one look</h2>
+  <p class="sub">Series names are the cheapest brand system you will ever build. They let one account hold four genres without ever looking confused.</p>
+
+  <div class="grid4">
+    <div class="card"><h3>ANDHAAR <span style="color:var(--gold);font-size:.8rem;letter-spacing:.1em">· EP 01–∞</span></h3><p>Your flagship mythology anthology, 45–75 seconds, Hindi voiceover, Gujarati subtitle optional. Start with the stories that are <em>already</em> dark: Rahu swallowing the sun, Kali and the night, Bhairav at the cremation ground, Shumbha–Nishumbha, Matsya and the flood, Yama and Nachiketa.</p></div>
+    <div class="card"><h3>MACHINES <span style="color:var(--gold);font-size:.8rem;letter-spacing:.1em">· 01–∞</span></h3><p>Automobile spec films with no client. One a month. Rim light, wet asphalt, dust, no badges. This series is your sales team: it is the only thing an ad agency needs to see to forward you to a client.</p></div>
+    <div class="card"><h3>WORKS <span style="color:var(--gold);font-size:.8rem;letter-spacing:.1em">· by category</span></h3><p>UGC-style sample ads for real D2C categories — but always labelled <strong>SPEC</strong>, never faked as real campaigns. Format: hook in 1.5s, problem, product, proof, CTA. This is what converts a DM into a ₹15,000 job.</p></div>
+    <div class="card"><h3>CHHOTE ASUR <span style="color:var(--gold);font-size:.8rem;letter-spacing:.1em">· 07</span></h3><p>3D cartoon shorts about small, petty, hilarious asuras failing at villainy. Cute-dark, no dialogue needed, exportable to any language, and the natural seed of your spin-off account in month 4.</p></div>
+  </div>
+
+  <h3 style="margin-top:34px">The weekly grid (solo, 40 hrs — this is survivable)</h3>
+  <div class="week">
+    <div class="day myth"><b>Mon</b><span>ANDHAAR</span><em>Flagship reel</em></div>
+    <div class="day"><b>Tue</b><span>Process carousel</span><em>Frame → film</em></div>
+    <div class="day myth"><b>Wed</b><span>ANDHAAR</span><em>Flagship reel</em></div>
+    <div class="day work"><b>Thu</b><span>WORKS</span><em>UGC / ad sample</em></div>
+    <div class="day myth"><b>Fri</b><span>ANDHAAR <span style="opacity:.6">or</span> MACHINES</span><em>Reel</em></div>
+    <div class="day"><b>Sat</b><span>CHHOTE ASUR</span><em>Cartoon short</em></div>
+    <div class="day"><b>Sun</b><span>Story / poll</span><em>Vote the next myth</em></div>
+  </div>
+  <div class="notice" style="margin-top:18px"><b>The one-look rule:</b> one grade (crushed blacks, ember highlight, teal-free), one display typeface (Cinzel), one lower-third, one end sting. Everything else can vary. If a stranger scrolled your grid with the captions hidden, they should know all 30 posts came from the same room.</div>
+
+  <details><summary>The first nine posts (your launch bank — shoot these before you announce anything)</summary>
+  <div class="inner"><ol style="margin-left:18px">
+    <li><strong>ANDHAAR EP 01 — Rahu.</strong> The eclipse as the origin of the studio itself. Pinned. This is your flag in the ground.</li>
+    <li><strong>MACHINES 01.</strong> A single car, one light source, 20 seconds, no logo. Ends on the eclipse sting.</li>
+    <li><strong>ANDHAAR EP 02 — Kali and the night.</strong> Darkness as protection, not terror.</li>
+    <li><strong>WORKS — D2C skincare (SPEC).</strong> 15-second UGC style. Proves you can sell a product, not just an emotion.</li>
+    <li><strong>Carousel: "How a 60-second myth is made."</strong> Frame, prompt, sound, cut. Trust builder — this is the post that makes agencies follow you.</li>
+    <li><strong>ANDHAAR EP 03 — Bhairav.</strong> Your darkest grade yet. Test how far the audience lets you go.</li>
+    <li><strong>CHHOTE ASUR 01.</strong> The tonal break. Same universe, opposite emotion.</li>
+    <li><strong>MACHINES 02 + a pinned "HIRE" highlight.</strong> Now you are open for business, not just posting.</li>
+    <li><strong>Founding post:</strong> the origin myth above, as a 9-slide carousel. People follow why you exist before they follow what you make.</li>
+  </ol></div></details>
+</section>
+
+<!-- 08 90 DAYS -->
+<section id="ninety" class="reveal">
+  <div class="label">08 · The rollout</div>
+  <h2>90 days, three gates</h2>
+  <p class="sub">Gates exist so you stop guessing. If a gate is missed, you change the plan — not the effort.</p>
+
+  <div class="card" style="margin-bottom:18px">
+    <div class="phase">
+      <div class="days">Days 1–10 · Lock the identity</div>
+      <h4>Nothing gets posted until all of this is true</h4>
+      <ul class="check">
+        <li>Trademark search on the name (ipindia public search) — free, 20 minutes</li>
+        <li class="done">Handles secured on Instagram, YouTube, X, LinkedIn, Behance — same string everywhere</li>
+        <li>Domain: <strong>grahan.studio</strong>, fallback .in / .films / getgrahan.com</li>
+        <li>Rahu locked: 3 consistent reference frames you will reuse forever</li>
+        <li>One-page site: 3 films, 4 lines of copy, a contact button. Nothing else.</li>
+        <li>Rate card + invoice template + a business email (not gmail-with-a-number)</li>
+        <li>Nine-post bank finished. Announce only when you have nine.</li>
+      </ul>
+    </div>
+    <div class="phase">
+      <div class="days">Days 11–45 · Build the signal</div>
+      <h4>Prove one lane works before touching the others</h4>
+      <ul class="check">
+        <li>18 posts on the weekly grid, weighted to ANDHAAR</li>
+        <li>Every post ends on the Swallow sting, no exceptions</li>
+        <li>Comment on 20 mythology/auto pages a day for the first 3 weeks — this is how a new account borrows an audience</li>
+        <li><strong>Gate:</strong> one reel crosses 50,000 views, and profile visits exceed 3,000/month. If not, the problem is the first 1.5 seconds — fix hooks, not genres.</li>
+      </ul>
+    </div>
+    <div class="phase">
+      <div class="days">Days 46–90 · Convert</div>
+      <h4>Turn attention into invoices</h4>
+      <ul class="check">
+        <li>Double down on the single best-performing myth. Make EP 04 its sequel, not a new topic.</li>
+        <li>CHHOTE ASUR teaser → if it travels, plan the spin-off for month 4</li>
+        <li>Three outbound pitches a day: ad agencies, car dealerships, D2C brands. Attach a 20-second spec film made <em>for them</em>.</li>
+        <li>HIRE highlight + keyword DM ("FILM") + a 3-question brief form</li>
+        <li><strong>Gate:</strong> two paid jobs, at any price. Price is not the point — case studies are.</li>
+      </ul>
+    </div>
+  </div>
+  <div class="notice warn"><b>What to do when a lane dies:</b> give any series eight honest posts before you judge it. If it has not produced a single save or share in eight, kill it and put the hours into the winner. Do not carry four dead series out of loyalty to the plan.</div>
+</section>
+
+<!-- 09 KIT -->
+<section id="kit" class="reveal">
+  <div class="label">09 · The kit</div>
+  <h2>Handles, names and bios — copy-paste</h2>
+  <p class="sub">Use the same string everywhere: <strong>grahan.studio</strong> or <strong>grahanfilms</strong>. Check in this order, because squatters watch for new names: domain first, then YouTube, then Instagram.</p>
+
+  <div class="grid2" style="margin-bottom:22px">
+    <div class="card"><h3>Handle ladder</h3><ul>
+      <li><strong>grahan.studio</strong> — best. Reads as a company.</li>
+      <li><strong>grahanfilms</strong> — strongest fallback, works on every platform.</li>
+      <li><strong>wearegrahan</strong> — good for a studio voice.</li>
+      <li><strong>grahan.pictures</strong> — most "studio" of all.</li>
+      <li>Avoid: numbers, underscores, "official", "ai" in the handle.</li>
+    </ul></div>
+    <div class="card"><h3>Display names</h3><ul>
+      <li>Instagram: <strong>GRAHAN · AI Film Studio</strong></li>
+      <li>YouTube: <strong>GRAHAN — AI Film Studio</strong></li>
+      <li>LinkedIn (company): <strong>GRAHAN Film Studio</strong></li>
+      <li>X: <strong>GRAHAN</strong></li>
+      <li>Email: <strong>hello@grahan.studio</strong> · work: <strong>work@grahan.studio</strong></li>
+    </ul></div>
+  </div>
+
+  <div class="bio"><div class="bhead"><b>Instagram · English</b><button class="copy" data-copy="b1">Copy</button></div>
+  <pre id="b1">GRAHAN · AI Film Studio
+Films from the shadow of the sun.
+Myths · Machines · Ads
+Vadodara → the world
+Hire us → DM “FILM”</pre></div>
+
+  <div class="bio"><div class="bhead"><b>Instagram · Hindi-first</b><button class="copy" data-copy="b2">Copy</button></div>
+  <pre id="b2" class="hi">ग्रहण · AI फिल्म स्टूडियो
+सूरज को निगलने वाले।
+मिथक · मशीनें · विज्ञापन
+वडोदरा से दुनिया तक
+काम के लिए DM करें → “FILM”</pre></div>
+
+  <div class="bio"><div class="bhead"><b>Instagram · Gujarati-first</b><button class="copy" data-copy="b3">Copy</button></div>
+  <pre id="b3" class="gu">ગ્રહણ · AI ફિલ્મ સ્ટુડિયો
+અંધારમાંથી કથા.
+પુરાણ · મશીન · જાહેરાત
+વડોદરાથી દુનિયા સુધી
+કામ માટે DM કરો → “FILM”</pre></div>
+
+  <div class="bio"><div class="bhead"><b>YouTube · channel description</b><button class="copy" data-copy="b4">Copy</button></div>
+  <pre id="b4">GRAHAN is an AI film studio from Vadodara, India. We make 60-second myths, cinematic car films and mythic advertising.
+
+New episode every Mon / Wed / Fri.
+· ANDHAAR — dark mythology, episode by episode
+· MACHINES — automobile spec films
+· WORKS — UGC and brand spots
+· CHHOTE ASUR — 3D cartoon shorts
+
+For work: work@grahan.studio</pre></div>
+
+  <div class="bio"><div class="bhead"><b>LinkedIn · company tagline</b><button class="copy" data-copy="b5">Copy</button></div>
+  <pre id="b5">GRAHAN is an AI film studio specialising in mythological storytelling, automotive films and performance-led advertising. We combine direction, generative production and sound design to deliver cinema-grade films without a shoot day. Based in Vadodara, working worldwide.</pre></div>
+
+  <details style="margin-top:20px"><summary>The 15-minute availability check (do this before you announce)</summary>
+  <div class="inner">
+  <ol style="margin-left:18px">
+    <li>Open a private/incognito window. Visit <code>instagram.com/grahan.studio</code> and <code>instagram.com/grahanfilms</code>. A real profile loads; a free handle shows "Sorry, this page isn't available".</li>
+    <li>Repeat on <code>youtube.com/@grahanstudio</code> and <code>x.com/grahanstudio</code>. YouTube shows "This page isn't available" for free handles.</li>
+    <li>Check the domain at any registrar — if it resolves to a parked page, it is taken (and might be for sale).</li>
+    <li>Search <code>ipindia</code> public trademark search for "GRAHAN" in classes 41 and 35. If a live mark exists in class 41 (entertainment), pick the runner-up instead of fighting it.</li>
+    <li>Grab the handle on every platform <em>the same day</em>, even the ones you will not use for a year. Squatters move fast on new Indian studio names.</li>
+  </ol></div></details>
+</section>
+
+<!-- 10 MONEY -->
+<section id="money" class="reveal">
+  <div class="label">10 · The money</div>
+  <h2>From followers to invoices</h2>
+  <p class="sub">Indicative India-market ranges for a solo studio with a strong portfolio — validate locally, and raise them the moment you have three case studies.</p>
+
+  <div class="scroll">
+  <table>
+    <tr><th>Offer</th><th>India range</th><th>Global range</th><th>What it is for</th></tr>
+    <tr><td>UGC-style ad (single)</td><td>₹4,000 – 12,000</td><td>$250 – 600</td><td>Entry cash + reviews. Sell in bundles of three.</td></tr>
+    <tr><td>Spec product / ad film, 30s</td><td>₹20,000 – 60,000</td><td>$1,200 – 3,000</td><td>The bread and butter. Price the <em>film</em>, never the render minutes.</td></tr>
+    <tr><td>Mythic brand film, 60–90s</td><td>₹75,000 – 2,50,000</td><td>$3,000 – 8,000</td><td>Your premium lane. Festive campaigns, launches, OTT promos.</td></tr>
+    <tr><td>Monthly retainer, 4 reels</td><td>₹40,000 – 90,000</td><td>$1,500 – 4,000</td><td>The goal by month 6. Predictable income beats bigger one-offs.</td></tr>
+    <tr><td>Mythology series sponsorship</td><td>₹50,000 – 1,50,000 / season</td><td>—</td><td>Devotional-adjacent brands: travel, jewellery, ayurveda, temples, D2C puja.</td></tr>
+  </table>
+  </div>
+
+  <div class="grid2" style="margin-top:20px">
+    <div class="card"><h3>The honest ceiling of Instagram DMs</h3><p>DMs are excellent for ₹5,000–₹50,000 jobs and terrible for ₹2,00,000 ones. Big clients do not slide into DMs — they <em>search</em>, and then ask an agency who to call. So Instagram is your top of funnel; a one-page site, a YouTube channel and a LinkedIn presence are what actually close the large briefs. Your answer said DMs only — keep DMs, but build the three credibility assets behind them.</p></div>
+    <div class="card"><h3>The DM funnel, exactly</h3><ul>
+      <li><strong>Pinned reel</strong> (your best myth) with a spoken CTA in the last 2 seconds</li>
+      <li><strong>HIRE highlight</strong> — 6 frames: showreel, 3 spec films, rates-from, contact</li>
+      <li><strong>Keyword</strong> "FILM" auto-replies with 3 questions: category / deadline / budget band</li>
+      <li><strong>One-page brief link</strong> — never "tell me more" in chat</li>
+      <li><strong>50% advance</strong>, always, before a single generation</li>
+    </ul></div>
+  </div>
+</section>
+
+<!-- 11 RULES -->
+<section id="rules" class="reveal">
+  <div class="label">11 · Guardrails</div>
+  <h2>The five things that can end a young studio</h2>
+  <div class="grid2">
+    <div class="card"><h3>1 · Devotional sensitivity</h3><p>Your anchor is mythology, so you will be held to a higher standard than a meme page. Put the darkness in the <em>world</em> — asuras, storms, scale, night — never in the deities. No "edgy" reimagining of gods, no deity imagery in paid brand work, no AI faces of living gurus. One consultation with a scholar early buys you years of credibility and a shield in the comments.</p></div>
+    <div class="card"><h3>2 · Fake brand campaigns</h3><p>Never publish a spot using a real brand's logo as if it were commissioned. Label every one <strong>SPEC</strong> in the first frame. In India, ASCI guidelines and trademark law both bite here, and one angry brand can erase your client pipeline overnight.</p></div>
+    <div class="card"><h3>3 · Hiding the AI</h3><p>Do not hide it — <em>reframe</em> it. Use platform synthetic-content labels, and always say "directed by" before "generated with". Clients forgive tools; they do not forgive being misled. The label costs you nothing and protects you when a video travels.</p></div>
+    <div class="card"><h3>4 · Naming before filing</h3><p>Search the trademark before you print a single T-shirt or pay for a logo. File class 41 (entertainment/production) first, then 35 (advertising) when revenue justifies it. Govt fee is modest for an individual/startup filing per class — check the current ipindia fee schedule, it changes.</p></div>
+    <div class="card"><h3>5 · Chasing every genre</h3><p>You listed five genres because you can do five. Do not let that become five half-brands. The pillar ratio exists precisely so your ambition has a container. When in doubt, make the myth.</p></div>
+    <div class="card"><h3>6 · Silent failure</h3><p>Post the work even when it is not perfect. A studio with 40 published films beats a studio with 4 perfect ones and a folder of ideas. The compounding asset here is <em>volume of finished work</em>, not polish.</p></div>
+  </div>
+</section>
+
+<!-- 12 NEXT -->
+<section id="next" class="reveal">
+  <div class="label">12 · Next</div>
+  <h2>Your next three moves</h2>
+  <div class="grid3">
+    <div class="card"><div class="num">01</div><h3>Today</h3><p>Run the 15-minute availability check on <strong>GRAHAN</strong>. If clean, buy the domain and claim every handle before you tell a single person the name.</p></div>
+    <div class="card"><div class="num">02</div><h3>This week</h3><p>Lock Rahu in three reference frames and render the 1.5-second Swallow sting. That sting is your entire brand identity — it should exist before your first post.</p></div>
+    <div class="card"><div class="num">03</div><h3>Next 10 days</h3><p>Make the nine-post bank, weighted to ANDHAAR EP 01 (Rahu). Announce on day 10 with nine posts already live, not with an empty grid and a "coming soon".</p></div>
+  </div>
+  <div class="quote" style="margin-top:26px">"We do not light our stories. We eclipse them." — GRAHAN, founding line.</div>
+</section>
+
+</main>
+
+<footer><div class="wrap">
+  <div><b style="font-family:Cinzel,serif;letter-spacing:.28em;color:#fff">GRAHAN</b><br>Studio Bible v1 · name, identity, feed and rollout. Built for a solo director going full-time.</div>
+  <div>Handles and trademark availability must be verified before launch. See section 09.</div>
+</div></footer>
+
+<script>
+// verdict switcher
+const views = {
+  one: {h:"One studio account — and it is not a compromise", p:"Five genres, one audience. The person who watches a 60-second Rahu myth and the person who watches a car spec film are the same human: an Indian 18–34 who likes scale, shadow and sound. Instagram does not sort your grid by topic; it sorts by <em>who watched</em>. If the same viewer finishes both, you have one account with range — which is exactly what a studio is. You are selling <strong>capability</strong>, and a mixed-but-consistent feed is the fastest way to show it.", l:["One audience to learn","One calendar to sustain","Range reads as a studio","Zero split attention"]},
+  five: {h:"Five accounts — a full-time job multiplied by five", p:"Five accounts is not five times the reach. It is five cold starts, five algorithm educations, five content calendars and one exhausted solo operator. Each account starts at zero watch-time signal, and each one needs 3–5 posts a week to stay alive. At 40 hours a week you can run <strong>one</strong> account well, or five badly — and a badly run myth account is worse than no myth account, because devotional audiences punish inconsistency harder than any other niche.", l:["5 cold starts","5 calendars","Fragmented brand recall","Almost certain burnout by month 3"]},
+  why: {h:"Why mixed feeds really fail (it is not the topics)", p:"Mixed feeds fail for two reasons, and neither is 'too many genres'. <strong>One:</strong> mixed <em>craft signal</em> — a beautifully lit myth next to a lazy repost tells the algorithm your account has no reliable quality, so it stops testing you broadly. <strong>Two:</strong> mixed <em>audience</em> — if car viewers and myth viewers never overlap, each post resets the others' signal. Your five genres share one viewer, so the second problem does not apply to you. The first one is entirely in your control: one grade, one typeface, one sting, every time.", l:["Fix craft consistency","Fix audience overlap","Then mix freely"]}
+};
+const box = document.getElementById('verdictBox');
+function render(k){
+  const v = views[k];
+  box.innerHTML = '<h3>'+v.h+'</h3><p style="color:#c9c0b3;font-size:.97rem">'+v.p+'</p><div style="display:flex;gap:8px;flex-wrap:wrap;margin-top:14px">'+v.l.map(x=>'<span class="pill">'+x+'</span>').join('')+'</div>';
+}
+render('one');
+document.querySelectorAll('.switch button').forEach(b=>{
+  b.addEventListener('click',()=>{
+    document.querySelectorAll('.switch button').forEach(x=>x.classList.remove('on'));
+    b.classList.add('on'); render(b.dataset.view);
+  });
+});
+
+// copy buttons
+document.querySelectorAll('.copy').forEach(btn=>{
+  btn.addEventListener('click',async()=>{
+    const el = document.getElementById(btn.dataset.copy);
+    try{
+      await navigator.clipboard.writeText(el.innerText);
+      const old = btn.textContent; btn.textContent = 'Copied'; setTimeout(()=>btn.textContent=old,1400);
+    }catch(e){ btn.textContent = 'Select & copy'; }
+  });
+});
+
+// reveal on scroll
+const io = new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting){e.target.classList.add('on');io.unobserve(e.target);}}),{threshold:.08});
+document.querySelectorAll('.reveal').forEach(el=>io.observe(el));
+</script>
+</body>
+</html>

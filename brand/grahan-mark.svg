@@ -1,0 +1,42 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="512" height="512" role="img" aria-label="GRAHAN eclipse mark">
+  <title>GRAHAN — eclipse mark</title>
+  <defs>
+    <radialGradient id="gCorona" cx="50%" cy="50%" r="50%">
+      <stop offset="0.54" stop-color="#ffb457" stop-opacity="0"/>
+      <stop offset="0.68" stop-color="#ffb457" stop-opacity="0.50"/>
+      <stop offset="0.77" stop-color="#ff7a3c" stop-opacity="0.22"/>
+      <stop offset="0.90" stop-color="#ff7a3c" stop-opacity="0.06"/>
+      <stop offset="1" stop-color="#ff7a3c" stop-opacity="0"/>
+    </radialGradient>
+    <radialGradient id="gDisc" cx="50%" cy="50%" r="50%">
+      <stop offset="0.90" stop-color="#080706"/>
+      <stop offset="1" stop-color="#000000"/>
+    </radialGradient>
+    <radialGradient id="gFlare" cx="50%" cy="50%" r="50%">
+      <stop offset="0" stop-color="#ffffff"/>
+      <stop offset="0.30" stop-color="#fff3d6" stop-opacity="0.90"/>
+      <stop offset="0.65" stop-color="#ffc074" stop-opacity="0.35"/>
+      <stop offset="1" stop-color="#ffb457" stop-opacity="0"/>
+    </radialGradient>
+    <filter id="fSoft" x="-60%" y="-60%" width="220%" height="220%">
+      <feGaussianBlur stdDeviation="7"/>
+    </filter>
+    <filter id="fSoft2" x="-60%" y="-60%" width="220%" height="220%">
+      <feGaussianBlur stdDeviation="2.2"/>
+    </filter>
+  </defs>
+  <circle cx="256" cy="256" r="198" fill="url(#gCorona)"/>
+  <circle cx="256" cy="256" r="152" fill="none" stroke="#ff8a3c" stroke-opacity="0.60" stroke-width="11" filter="url(#fSoft)"/>
+  <circle cx="256" cy="256" r="152" fill="url(#gDisc)"/>
+  <circle cx="256" cy="256" r="152" fill="none" stroke="#ffd79a" stroke-width="2.4" filter="url(#fSoft2)"/>
+  <circle cx="256" cy="256" r="152" fill="none" stroke="#fff6e2" stroke-width="1.05"/>
+  <g transform="translate(363.5 148.5)">
+    <circle r="30" fill="url(#gFlare)" opacity="0.95"/>
+    <g stroke="#ffffff" stroke-linecap="round" opacity="0.92">
+      <line x1="-34" y1="0" x2="34" y2="0" stroke-width="1.5"/>
+      <line x1="0" y1="-34" x2="0" y2="34" stroke-width="1.5"/>
+      <line x1="-19" y1="-19" x2="19" y2="19" stroke-width="1" opacity="0.45"/>
+      <line x1="-19" y1="19" x2="19" y2="-19" stroke-width="1" opacity="0.45"/>
+    </g>
+  </g>
+</svg>
